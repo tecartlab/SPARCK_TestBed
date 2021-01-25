@@ -191,6 +191,26 @@
 									"clickthrough" : 0,
 									"enablehscroll" : 0,
 									"enablevscroll" : 0,
+									"id" : "obj-5",
+									"lockeddragscroll" : 0,
+									"maxclass" : "bpatcher",
+									"name" : "bs.node.BoxMapCamera.maxpat",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"offset" : [ 0.0, 0.0 ],
+									"patching_rect" : [ 21.0, 109.0, 242.0, 266.0 ],
+									"varname" : "BoxMapCamera",
+									"viewvisibility" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgmode" : 0,
+									"border" : 0,
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
 									"id" : "obj-1",
 									"lockeddragscroll" : 0,
 									"maxclass" : "bpatcher",
@@ -198,7 +218,7 @@
 									"numinlets" : 15,
 									"numoutlets" : 0,
 									"offset" : [ 0.0, 0.0 ],
-									"patching_rect" : [ 510.0, 85.0, 242.0, 410.0 ],
+									"patching_rect" : [ 557.0, 88.0, 242.0, 410.0 ],
 									"varname" : "TextureProjectory",
 									"viewvisibility" : 1
 								}
@@ -219,7 +239,7 @@
 									"numoutlets" : 5,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "", "", "", "", "" ],
-									"patching_rect" : [ 243.0, 11.0, 242.0, 529.0 ],
+									"patching_rect" : [ 290.0, 11.0, 242.0, 529.0 ],
 									"varname" : "Canvas",
 									"viewvisibility" : 1
 								}
@@ -239,11 +259,41 @@
 									"numinlets" : 3,
 									"numoutlets" : 0,
 									"offset" : [ 0.0, 0.0 ],
-									"patching_rect" : [ 18.0, 11.0, 180.0, 36.0 ],
+									"patching_rect" : [ 25.0, 10.0, 180.0, 36.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 65.0, 293.0, 163.0, 130.0 ],
 									"varname" : "Grid",
 									"viewvisibility" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"data" : 									{
+										"clips" : [ 											{
+												"absolutepath" : "/Users/maybites/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_assets/_videos/360_VR_Temple.mp4",
+												"filename" : "360_VR_Temple.mp4",
+												"filekind" : "moviefile",
+												"id" : "u379011414",
+												"loop" : 1,
+												"content_state" : 												{
+													"loop" : 1
+												}
+
+											}
+ ]
+									}
+,
+									"drawto" : "sparck",
+									"id" : "obj-7",
+									"loop" : 1,
+									"maxclass" : "jit.playlist",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "jit_gl_texture", "", "dictionary" ],
+									"output_texture" : 1,
+									"parameter_enable" : 0,
+									"patching_rect" : [ 714.0, 11.0, 150.0, 30.0 ]
 								}
 
 							}
@@ -273,7 +323,7 @@
 									"outlettype" : [ "jit_gl_texture", "", "dictionary" ],
 									"output_texture" : 1,
 									"parameter_enable" : 0,
-									"patching_rect" : [ 536.85714285714289, 17.0, 150.0, 30.0 ]
+									"patching_rect" : [ 557.0, 11.0, 150.0, 30.0 ]
 								}
 
 							}
@@ -294,7 +344,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 151.0, 90.0, 1255.0, 706.0 ],
+										"rect" : [ 459.0, 184.0, 535.0, 295.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -337,50 +387,8 @@
 													"numoutlets" : 4,
 													"offset" : [ 0.0, 0.0 ],
 													"outlettype" : [ "", "jit_gl_texture", "jit_gl_texture", "" ],
-													"patching_rect" : [ 930.0, 8.0, 180.0, 36.0 ],
+													"patching_rect" : [ 228.0, 8.0, 180.0, 36.0 ],
 													"varname" : "Beamer_4",
-													"viewvisibility" : 1
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"bgmode" : 0,
-													"border" : 0,
-													"clickthrough" : 0,
-													"enablehscroll" : 0,
-													"enablevscroll" : 0,
-													"id" : "obj-6",
-													"lockeddragscroll" : 0,
-													"maxclass" : "bpatcher",
-													"name" : "bs.node.Beamer.maxpat",
-													"numinlets" : 4,
-													"numoutlets" : 4,
-													"offset" : [ 0.0, 0.0 ],
-													"outlettype" : [ "", "jit_gl_texture", "jit_gl_texture", "" ],
-													"patching_rect" : [ 617.0, 8.0, 180.0, 36.0 ],
-													"varname" : "Beamer_3",
-													"viewvisibility" : 1
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"bgmode" : 0,
-													"border" : 0,
-													"clickthrough" : 0,
-													"enablehscroll" : 0,
-													"enablevscroll" : 0,
-													"id" : "obj-4",
-													"lockeddragscroll" : 0,
-													"maxclass" : "bpatcher",
-													"name" : "bs.node.Beamer.maxpat",
-													"numinlets" : 4,
-													"numoutlets" : 4,
-													"offset" : [ 0.0, 0.0 ],
-													"outlettype" : [ "", "jit_gl_texture", "jit_gl_texture", "" ],
-													"patching_rect" : [ 309.0, 8.0, 180.0, 36.0 ],
-													"varname" : "Beamer_2",
 													"viewvisibility" : 1
 												}
 
@@ -448,7 +456,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 35.0, 161.0, 61.0, 22.0 ],
+									"patching_rect" : [ 25.0, 60.0, 61.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -464,7 +472,7 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 8 ],
+									"destination" : [ "obj-1", 4 ],
 									"order" : 0,
 									"source" : [ "obj-6", 0 ]
 								}
@@ -472,7 +480,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 6 ],
+									"destination" : [ "obj-1", 2 ],
 									"order" : 1,
 									"source" : [ "obj-6", 0 ]
 								}
@@ -480,17 +488,8 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 4 ],
-									"order" : 2,
-									"source" : [ "obj-6", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-1", 2 ],
-									"order" : 3,
-									"source" : [ "obj-6", 0 ]
+									"destination" : [ "obj-1", 6 ],
+									"source" : [ "obj-7", 0 ]
 								}
 
 							}
@@ -615,28 +614,6 @@
 			"obj-2::obj-2::obj-1::obj-8::obj-4::obj-6" : [ "PosZ", "PosZ", 0 ],
 			"obj-2::obj-2::obj-1::obj-8::obj-4::obj-7" : [ "RotZ", "RotZ", 0 ],
 			"obj-2::obj-2::obj-1::obj-8::obj-51::obj-12::obj-47::obj-20::obj-72" : [ "toggle[2]", "toggle", 0 ],
-			"obj-2::obj-2::obj-4::obj-33::obj-99::obj-12::obj-47::obj-20::obj-72" : [ "toggle[5]", "toggle", 0 ],
-			"obj-2::obj-2::obj-4::obj-8::obj-105::obj-12" : [ "implementParent[1]", "implementParent", 0 ],
-			"obj-2::obj-2::obj-4::obj-8::obj-4::obj-10" : [ "RotY[1]", "RotY", 0 ],
-			"obj-2::obj-2::obj-4::obj-8::obj-4::obj-13" : [ "RotX[1]", "RotX", 0 ],
-			"obj-2::obj-2::obj-4::obj-8::obj-4::obj-16" : [ "PosX[1]", "PosX", 0 ],
-			"obj-2::obj-2::obj-4::obj-8::obj-4::obj-17" : [ "ScaleXYZ[1]", "ScaleXYZ", 0 ],
-			"obj-2::obj-2::obj-4::obj-8::obj-4::obj-2" : [ "PosY[1]", "PosY", 0 ],
-			"obj-2::obj-2::obj-4::obj-8::obj-4::obj-24" : [ "use[1]", "use", 0 ],
-			"obj-2::obj-2::obj-4::obj-8::obj-4::obj-6" : [ "PosZ[1]", "PosZ", 0 ],
-			"obj-2::obj-2::obj-4::obj-8::obj-4::obj-7" : [ "RotZ[1]", "RotZ", 0 ],
-			"obj-2::obj-2::obj-4::obj-8::obj-51::obj-12::obj-47::obj-20::obj-72" : [ "toggle[6]", "toggle", 0 ],
-			"obj-2::obj-2::obj-6::obj-33::obj-99::obj-12::obj-47::obj-20::obj-72" : [ "toggle[8]", "toggle", 0 ],
-			"obj-2::obj-2::obj-6::obj-8::obj-105::obj-12" : [ "implementParent[2]", "implementParent", 0 ],
-			"obj-2::obj-2::obj-6::obj-8::obj-4::obj-10" : [ "RotY[2]", "RotY", 0 ],
-			"obj-2::obj-2::obj-6::obj-8::obj-4::obj-13" : [ "RotX[2]", "RotX", 0 ],
-			"obj-2::obj-2::obj-6::obj-8::obj-4::obj-16" : [ "PosX[2]", "PosX", 0 ],
-			"obj-2::obj-2::obj-6::obj-8::obj-4::obj-17" : [ "ScaleXYZ[2]", "ScaleXYZ", 0 ],
-			"obj-2::obj-2::obj-6::obj-8::obj-4::obj-2" : [ "PosY[2]", "PosY", 0 ],
-			"obj-2::obj-2::obj-6::obj-8::obj-4::obj-24" : [ "use[2]", "use", 0 ],
-			"obj-2::obj-2::obj-6::obj-8::obj-4::obj-6" : [ "PosZ[2]", "PosZ", 0 ],
-			"obj-2::obj-2::obj-6::obj-8::obj-4::obj-7" : [ "RotZ[2]", "RotZ", 0 ],
-			"obj-2::obj-2::obj-6::obj-8::obj-51::obj-12::obj-47::obj-20::obj-72" : [ "toggle[9]", "toggle", 0 ],
 			"obj-2::obj-2::obj-8::obj-33::obj-99::obj-12::obj-47::obj-20::obj-72" : [ "toggle[11]", "toggle", 0 ],
 			"obj-2::obj-2::obj-8::obj-8::obj-105::obj-12" : [ "implementParent[3]", "implementParent", 0 ],
 			"obj-2::obj-2::obj-8::obj-8::obj-4::obj-10" : [ "RotY[3]", "RotY", 0 ],
@@ -1308,23 +1285,16 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "projector_3.xml",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_assets/_projectors",
-				"patcherrelativepath" : "./_assets/_projectors",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "projector_4.xml",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_assets/_projectors",
-				"patcherrelativepath" : "./_assets/_projectors",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "dozer.mov",
 				"bootpath" : "C74:/media/jitter",
 				"type" : "MooV",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "360_VR_Temple.mp4",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_assets/_videos",
+				"patcherrelativepath" : "./_assets/_videos",
+				"type" : "mpg4",
 				"implicit" : 1
 			}
 , 			{
@@ -1482,9 +1452,37 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "bs.node.BoxMapCamera.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/nodes/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/nodes/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.props.BoxMapCamera.p.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/nodes/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/nodes/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.draw.box.camera.js",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/javascript/draw",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/javascript/draw",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.math.frustum2pMatrix.js",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/javascript/math",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/javascript/math",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "settings.xml",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_settings/_project/_TextureProjectory_Multiple",
-				"patcherrelativepath" : "./_settings/_project/_TextureProjectory_Multiple",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_settings/_project/_TextureProjectory_360VR_Multiple",
+				"patcherrelativepath" : "./_settings/_project/_TextureProjectory_360VR_Multiple",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

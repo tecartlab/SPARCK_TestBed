@@ -271,13 +271,13 @@
 								"box" : 								{
 									"data" : 									{
 										"clips" : [ 											{
-												"absolutepath" : "/Users/maybites/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_assets/_videos/360_VR Master Series Free Download Crystal Shower Falls.mp4",
-												"filename" : "360_VR Master Series Free Download Crystal Shower Falls.mp4",
+												"absolutepath" : "/Users/maybites/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_assets/_videos/360_VR_CityRiver.mp4",
+												"filename" : "360_VR_CityRiver.mp4",
 												"filekind" : "moviefile",
-												"id" : "u484046943",
-												"loop" : 0,
+												"id" : "u532069577",
+												"loop" : 1,
 												"content_state" : 												{
-													"loop" : 0
+													"loop" : 1
 												}
 
 											}
@@ -855,7 +855,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "360_VR Master Series Free Download Crystal Shower Falls.mp4",
+				"name" : "360_VR_CityRiver.mp4",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_assets/_videos",
 				"patcherrelativepath" : "./_assets/_videos",
 				"type" : "mpg4",

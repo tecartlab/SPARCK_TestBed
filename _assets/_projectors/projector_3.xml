@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<pattrstorage name = "Beamer">
+	<slot number = "1">
+		<patcher name = "parent">
+			<pattr name = "implementParent" value = "" />
+			<patcher name = "parent">
+				<pattr name = "matrix" value = "" />
+			</patcher>
+		</patcher>
+		<patcher name = "calibration">
+			<pattr name = "matrix" value = "-0.844155 0.535829 0.017022 0. 0.013855 -0.009936 0.999855 0. 0.53592 0.844268 0.000964 0. 4.387171 7.972428 5.562613 1." />
+		</patcher>
+		<patcher name = "gateObject">
+			<pattr name = "fileName" value = "IASpace_Model.obj" />
+		</patcher>
+		<patcher name = "color">
+			<pattr name = "alpha" value = "1." />
+			<pattr name = "blue" value = "0.998529" />
+			<pattr name = "green" value = "0.451262" />
+			<pattr name = "red" value = "0.312248" />
+		</patcher>
+		<patcher name = "calibObjOffset">
+			<pattr name = "PosX" value = "0." />
+			<pattr name = "PosY" value = "0." />
+			<pattr name = "PosZ" value = "0." />
+			<pattr name = "RotX" value = "0." />
+			<pattr name = "RotY" value = "0." />
+			<pattr name = "RotZ" value = "0." />
+			<pattr name = "ScaleXYZ" value = "1." />
+			<pattr name = "use" value = "0" />
+		</patcher>
+		<patcher name = "intrinsic">
+			<pattr name = "frustumBottom" value = "-0.087575" />
+			<pattr name = "frustumFar" value = "100." />
+			<pattr name = "frustumLeft" value = "-0.090897" />
+			<pattr name = "frustumNear" value = "0.1" />
+			<pattr name = "frustumRight" value = "0.022129" />
+			<pattr name = "frustumTop" value = "-0.023997" />
+		</patcher>
+		<patcher name = "parentNode">
+		</patcher>
+		<patcher name = "beamer">
+			<pattr name = "matrix" value = "-0.844155 0.535829 0.017022 0. 0.013855 -0.009936 0.999855 0. 0.53592 0.844268 0.000964 0. 4.387171 7.972428 5.562613 1." />
+		</patcher>
+		<patcher name = "resolution">
+			<pattr name = "height" value = "1080" />
+			<pattr name = "width" value = "1920" />
+		</patcher>
+		<patcher name = "flags">
+			<pattr name = "fixAspectRatio" value = "1" />
+			<pattr name = "fixIntrinsic" value = "1" />
+			<pattr name = "fixK1" value = "1" />
+			<pattr name = "fixK2" value = "1" />
+			<pattr name = "fixK3" value = "1" />
+			<pattr name = "fixK4" value = "1" />
+			<pattr name = "fixK5" value = "0" />
+			<pattr name = "fixK6" value = "0" />
+			<pattr name = "zeroTangentDistance" value = "1" />
+		</patcher>
+	</slot>
+</pattrstorage>
+

@@ -10,11 +10,8 @@
 				<pattr name = "preferences" value = "1" />
 			</patcher>
 			<patcher name = "Editor">
-				<patcher name = "_storePosition">
-					<pattr name = "lowerRightX" value = "545" />
-					<pattr name = "lowerRightY" value = "695" />
-					<pattr name = "upperLeftX" value = "5" />
-					<pattr name = "upperLeftY" value = "414" />
+				<patcher name = "patcher">
+					<pattr name = "position" value = "rect 5 410 545 695" />
 				</patcher>
 			</patcher>
 			<patcher name = "3DViewer">
@@ -30,11 +27,8 @@
 					<pattr name = "stagebutton" value = "1" />
 				</patcher>
 				<patcher name = "_storePosition">
-					<patcher name = "_storePosition">
-						<pattr name = "lowerRightX" value = "620" />
-						<pattr name = "lowerRightY" value = "492" />
-						<pattr name = "upperLeftX" value = "0" />
-						<pattr name = "upperLeftY" value = "50" />
+					<patcher name = "patcher">
+						<pattr name = "position" value = "rect 5 48 545 380" />
 					</patcher>
 				</patcher>
 			</patcher>

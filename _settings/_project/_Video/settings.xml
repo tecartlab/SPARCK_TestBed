@@ -4,18 +4,18 @@
 	<slot number = "1">
 		<patcher name = "Application_sparck">
 			<pattr name = "editor" value = "0" />
-			<pattr name = "mainMetro" value = "&quot;60 hz&quot;" />
+			<pattr name = "mainMetro" value = "&quot;20 hz&quot;" />
 			<pattr name = "mainSwitch" value = "1" />
 			<patcher name = "_properties">
 				<pattr name = "preferences" value = "1" />
 			</patcher>
 			<patcher name = "Editor">
 				<patcher name = "patcher">
-					<pattr name = "position" value = "rect 178 249 354 340" />
+					<pattr name = "position" value = "rect 5 410 545 695" />
 				</patcher>
 			</patcher>
 			<patcher name = "3DViewer">
-				<pattr name = "_enable" value = "0" />
+				<pattr name = "_enable" value = "1" />
 				<patcher name = "_orbiter">
 					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
 					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0. 1." />
@@ -28,7 +28,7 @@
 				</patcher>
 				<patcher name = "_storePosition">
 					<patcher name = "patcher">
-						<pattr name = "position" value = "rect 94 71 404 192" />
+						<pattr name = "position" value = "rect 5 48 545 380" />
 					</patcher>
 				</patcher>
 			</patcher>

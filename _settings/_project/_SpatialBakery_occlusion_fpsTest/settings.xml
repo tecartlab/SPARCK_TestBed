@@ -4,7 +4,7 @@
 	<slot number = "1">
 		<patcher name = "Application_sparck">
 			<pattr name = "editor" value = "0" />
-			<pattr name = "mainMetro" value = "&quot;20 hz&quot;" />
+			<pattr name = "mainMetro" value = "&quot;60 hz&quot;" />
 			<pattr name = "mainSwitch" value = "1" />
 			<patcher name = "_properties">
 				<pattr name = "preferences" value = "1" />
@@ -17,13 +17,13 @@
 			<patcher name = "3DViewer">
 				<pattr name = "_enable" value = "1" />
 				<patcher name = "_orbiter">
-					<pattr name = "orbitOnePosition" value = "position 0.151854 0.503356 1.959814" />
-					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0.087136 -0.99604" />
-					<pattr name = "orbitThreePosition" value = "position 0. 0. 2.85" />
-					<pattr name = "orbitTwoQuat" value = "quat 0.608698 0. 0. 0.793257" />
+					<pattr name = "orbitOnePosition" value = "position 0.182405 0.438186 2.014386" />
+					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0.886909 0.461696" />
+					<pattr name = "orbitThreePosition" value = "position 0. 0. 13.85" />
+					<pattr name = "orbitTwoQuat" value = "quat -0.514977 0. 0. -0.857061" />
 				</patcher>
 				<patcher name = "_setgroupstage">
-					<pattr name = "matrix" value = "0 1 1" />
+					<pattr name = "matrix" value = "0 0 1" />
 					<pattr name = "stagebutton" value = "1" />
 				</patcher>
 				<patcher name = "_storePosition">
@@ -34,7 +34,30 @@
 			</patcher>
 		</patcher>
 		<patcher name = "workspace">
-			<patcher name = "Output">
+			<pattr name = "bakeTexture" value = "1" />
+			<patcher name = "Beamer">
+				<patcher name = "Beamer_1">
+					<patcher name = "_transformationRig">
+						<pattr name = "Beamer" value = "1" />
+					</patcher>
+				</patcher>
+				<patcher name = "Beamer_2">
+					<patcher name = "_transformationRig">
+						<pattr name = "Beamer" value = "1" />
+					</patcher>
+				</patcher>
+				<patcher name = "Beamer_3">
+					<patcher name = "_transformationRig">
+						<pattr name = "Beamer" value = "1" />
+					</patcher>
+				</patcher>
+				<patcher name = "Beamer_4">
+					<patcher name = "_transformationRig">
+						<pattr name = "Beamer" value = "1" />
+					</patcher>
+				</patcher>
+			</patcher>
+			<patcher name = "Output_Projectors">
 				<patcher name = "_orbiter">
 					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
 					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0. 1." />

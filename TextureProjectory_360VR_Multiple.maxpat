@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 581.0, 81.0, 750.0, 145.0 ],
+		"rect" : [ 581.0, 81.0, 750.0, 104.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -191,6 +191,48 @@
 									"clickthrough" : 0,
 									"enablehscroll" : 0,
 									"enablevscroll" : 0,
+									"id" : "obj-7",
+									"lockeddragscroll" : 0,
+									"maxclass" : "bpatcher",
+									"name" : "bs.node.Video.maxpat",
+									"numinlets" : 2,
+									"numoutlets" : 5,
+									"offset" : [ 0.0, 0.0 ],
+									"outlettype" : [ "", "", "", "", "" ],
+									"patching_rect" : [ 612.0, 50.0, 180.0, 36.0 ],
+									"varname" : "Video_1",
+									"viewvisibility" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgmode" : 0,
+									"border" : 0,
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
+									"id" : "obj-6",
+									"lockeddragscroll" : 0,
+									"maxclass" : "bpatcher",
+									"name" : "bs.node.Video.maxpat",
+									"numinlets" : 2,
+									"numoutlets" : 5,
+									"offset" : [ 0.0, 0.0 ],
+									"outlettype" : [ "", "", "", "", "" ],
+									"patching_rect" : [ 548.60714285714289, 7.0, 180.0, 36.0 ],
+									"varname" : "Video",
+									"viewvisibility" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgmode" : 0,
+									"border" : 0,
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
 									"id" : "obj-10",
 									"lockeddragscroll" : 0,
 									"maxclass" : "bpatcher",
@@ -239,7 +281,7 @@
 									"numoutlets" : 2,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 18.0, 279.0, 242.0, 366.0 ],
+									"patching_rect" : [ 18.0, 273.0, 242.0, 366.0 ],
 									"varname" : "Camera",
 									"viewvisibility" : 1
 								}
@@ -279,7 +321,7 @@
 									"numinlets" : 15,
 									"numoutlets" : 0,
 									"offset" : [ 0.0, 0.0 ],
-									"patching_rect" : [ 557.0, 88.0, 242.0, 410.0 ],
+									"patching_rect" : [ 557.0, 97.0, 242.0, 410.0 ],
 									"varname" : "TextureProjectory",
 									"viewvisibility" : 1
 								}
@@ -297,9 +339,9 @@
 									"maxclass" : "bpatcher",
 									"name" : "bs.node.Canvas.maxpat",
 									"numinlets" : 4,
-									"numoutlets" : 5,
+									"numoutlets" : 4,
 									"offset" : [ 0.0, 0.0 ],
-									"outlettype" : [ "", "", "", "", "" ],
+									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 290.0, 11.0, 242.0, 529.0 ],
 									"varname" : "Canvas",
 									"viewvisibility" : 1
@@ -320,71 +362,11 @@
 									"numinlets" : 3,
 									"numoutlets" : 0,
 									"offset" : [ 0.0, 0.0 ],
-									"patching_rect" : [ 557.0, 500.0, 180.0, 36.0 ],
+									"patching_rect" : [ 557.0, 512.0, 180.0, 36.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 65.0, 293.0, 163.0, 130.0 ],
 									"varname" : "Grid",
 									"viewvisibility" : 1
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"data" : 									{
-										"clips" : [ 											{
-												"absolutepath" : "/Users/maybites/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_assets/_videos/360_VR_Temple.mp4",
-												"filename" : "360_VR_Temple.mp4",
-												"filekind" : "moviefile",
-												"id" : "u379011414",
-												"loop" : 1,
-												"content_state" : 												{
-													"loop" : 1
-												}
-
-											}
- ]
-									}
-,
-									"drawto" : "sparck",
-									"id" : "obj-7",
-									"loop" : 1,
-									"maxclass" : "jit.playlist",
-									"numinlets" : 1,
-									"numoutlets" : 3,
-									"outlettype" : [ "jit_gl_texture", "", "dictionary" ],
-									"output_texture" : 1,
-									"parameter_enable" : 0,
-									"patching_rect" : [ 557.0, 6.0, 150.0, 30.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"data" : 									{
-										"clips" : [ 											{
-												"absolutepath" : "dozer.mov",
-												"filename" : "dozer.mov",
-												"filekind" : "moviefile",
-												"id" : "u635024610",
-												"loop" : 1,
-												"content_state" : 												{
-													"loop" : 1
-												}
-
-											}
- ]
-									}
-,
-									"drawto" : "sparck",
-									"id" : "obj-6",
-									"loop" : 1,
-									"maxclass" : "jit.playlist",
-									"numinlets" : 1,
-									"numoutlets" : 3,
-									"outlettype" : [ "jit_gl_texture", "", "dictionary" ],
-									"output_texture" : 1,
-									"parameter_enable" : 0,
-									"patching_rect" : [ 620.714285714285779, 45.0, 150.0, 30.0 ]
 								}
 
 							}
@@ -398,15 +380,15 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 4 ],
-									"source" : [ "obj-6", 0 ]
+									"destination" : [ "obj-1", 2 ],
+									"source" : [ "obj-6", 1 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 2 ],
-									"source" : [ "obj-7", 0 ]
+									"destination" : [ "obj-1", 4 ],
+									"source" : [ "obj-7", 1 ]
 								}
 
 							}
@@ -522,6 +504,8 @@
 			"obj-1::obj-1::obj-72" : [ "toggle[1]", "toggle", 0 ],
 			"obj-2::obj-10::obj-34::obj-99::obj-12::obj-47::obj-20::obj-72" : [ "toggle", "toggle", 0 ],
 			"obj-2::obj-4::obj-10::obj-99::obj-12::obj-47::obj-20::obj-72" : [ "toggle[3]", "toggle", 0 ],
+			"obj-2::obj-6::obj-99::obj-12::obj-47::obj-20::obj-72" : [ "toggle[4]", "toggle", 0 ],
+			"obj-2::obj-7::obj-99::obj-12::obj-47::obj-20::obj-72" : [ "toggle[5]", "toggle", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -614,14 +598,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.app.contexter.winrect.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/app",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/app",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.app.contexter.winrect.abs.maxpat",
+				"name" : "bs.app.contexter.maxpat",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/app",
 				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/app",
 				"type" : "JSON",
@@ -762,13 +739,6 @@
 			}
 , 			{
 				"name" : "bs.app.output.editor.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/app",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/app",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.app.contexter.maxpat",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/app",
 				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/app",
 				"type" : "JSON",
@@ -936,16 +906,10 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "dozer.mov",
-				"bootpath" : "C74:/media/jitter",
-				"type" : "MooV",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "360_VR_Temple.mp4",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_assets/_videos",
-				"patcherrelativepath" : "./_assets/_videos",
-				"type" : "mpg4",
+				"name" : "bs.ossia.reflect.js",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/javascript/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/javascript/ossia",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -1285,17 +1249,17 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.display.selection.gate.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/gui",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/gui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "bs.node.output.unique.js",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/javascript/nodes",
 				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/javascript/nodes",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.display.selection.gate.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/gui",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/gui",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -1320,11 +1284,29 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "bs.node.Video.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/nodes/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/nodes/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.util.special.render.gate.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/utils",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/utils",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "settings.xml",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_settings/_project/_TextureProjectory_360VR_Multiple",
 				"patcherrelativepath" : "./_settings/_project/_TextureProjectory_360VR_Multiple",
 				"type" : "TEXT",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "mxj.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "bs.msg.send.mxo",

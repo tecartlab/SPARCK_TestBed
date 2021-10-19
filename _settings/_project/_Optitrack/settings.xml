@@ -10,31 +10,25 @@
 				<pattr name = "preferences" value = "1" />
 			</patcher>
 			<patcher name = "Editor">
-				<patcher name = "_storePosition">
-					<pattr name = "lowerRightX" value = "1" />
-					<pattr name = "lowerRightY" value = "1" />
-					<pattr name = "upperLeftX" value = "0" />
-					<pattr name = "upperLeftY" value = "0" />
+				<patcher name = "patcher">
+					<pattr name = "position" value = "rect 5 410 545 695" />
 				</patcher>
 			</patcher>
 			<patcher name = "3DViewer">
 				<pattr name = "_enable" value = "1" />
 				<patcher name = "_orbiter">
-					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
-					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0. 1." />
-					<pattr name = "orbitThreePosition" value = "position 0. 0. 3." />
-					<pattr name = "orbitTwoQuat" value = "quat 0. 0. 0. 1." />
+					<pattr name = "orbitOnePosition" value = "position 0.868898 -0.134977 0.668111" />
+					<pattr name = "orbitOneQuat" value = "quat 0. 0. -0.061048 0.998131" />
+					<pattr name = "orbitThreePosition" value = "position 0. 0. 3.7" />
+					<pattr name = "orbitTwoQuat" value = "quat 0.537298 0. 0. 0.843389" />
 				</patcher>
 				<patcher name = "_setgroupstage">
 					<pattr name = "matrix" value = "0 0 0" />
-					<pattr name = "stagebutton" value = "0" />
+					<pattr name = "stagebutton" value = "1" />
 				</patcher>
 				<patcher name = "_storePosition">
-					<patcher name = "_storePosition">
-						<pattr name = "lowerRightX" value = "485" />
-						<pattr name = "lowerRightY" value = "321" />
-						<pattr name = "upperLeftX" value = "8" />
-						<pattr name = "upperLeftY" value = "31" />
+					<patcher name = "patcher">
+						<pattr name = "position" value = "rect 10 280 550 612" />
 					</patcher>
 				</patcher>
 			</patcher>

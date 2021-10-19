@@ -191,6 +191,27 @@
 									"clickthrough" : 0,
 									"enablehscroll" : 0,
 									"enablevscroll" : 0,
+									"id" : "obj-10",
+									"lockeddragscroll" : 0,
+									"maxclass" : "bpatcher",
+									"name" : "bs.node.Video.maxpat",
+									"numinlets" : 2,
+									"numoutlets" : 5,
+									"offset" : [ 0.0, 0.0 ],
+									"outlettype" : [ "", "", "", "", "" ],
+									"patching_rect" : [ 505.0, 15.0, 180.0, 36.0 ],
+									"varname" : "Video",
+									"viewvisibility" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgmode" : 0,
+									"border" : 0,
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
 									"id" : "obj-1",
 									"lockeddragscroll" : 0,
 									"maxclass" : "bpatcher",
@@ -198,7 +219,7 @@
 									"numinlets" : 15,
 									"numoutlets" : 0,
 									"offset" : [ 0.0, 0.0 ],
-									"patching_rect" : [ 510.0, 85.0, 242.0, 410.0 ],
+									"patching_rect" : [ 505.0, 142.0, 242.0, 410.0 ],
 									"varname" : "TextureProjectory",
 									"viewvisibility" : 1
 								}
@@ -216,9 +237,9 @@
 									"maxclass" : "bpatcher",
 									"name" : "bs.node.Canvas.maxpat",
 									"numinlets" : 4,
-									"numoutlets" : 5,
+									"numoutlets" : 4,
 									"offset" : [ 0.0, 0.0 ],
-									"outlettype" : [ "", "", "", "", "" ],
+									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 243.0, 11.0, 242.0, 529.0 ],
 									"varname" : "Canvas",
 									"viewvisibility" : 1
@@ -244,36 +265,6 @@
 									"presentation_rect" : [ 65.0, 293.0, 163.0, 130.0 ],
 									"varname" : "Grid",
 									"viewvisibility" : 1
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"data" : 									{
-										"clips" : [ 											{
-												"absolutepath" : "dozer.mov",
-												"filename" : "dozer.mov",
-												"filekind" : "moviefile",
-												"id" : "u635024610",
-												"loop" : 1,
-												"content_state" : 												{
-													"loop" : 1
-												}
-
-											}
- ]
-									}
-,
-									"drawto" : "sparck",
-									"id" : "obj-6",
-									"loop" : 1,
-									"maxclass" : "jit.playlist",
-									"numinlets" : 1,
-									"numoutlets" : 3,
-									"outlettype" : [ "jit_gl_texture", "", "dictionary" ],
-									"output_texture" : 1,
-									"parameter_enable" : 0,
-									"patching_rect" : [ 536.85714285714289, 17.0, 150.0, 30.0 ]
 								}
 
 							}
@@ -466,7 +457,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-1", 8 ],
 									"order" : 0,
-									"source" : [ "obj-6", 0 ]
+									"source" : [ "obj-10", 1 ]
 								}
 
 							}
@@ -474,7 +465,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-1", 6 ],
 									"order" : 1,
-									"source" : [ "obj-6", 0 ]
+									"source" : [ "obj-10", 1 ]
 								}
 
 							}
@@ -482,7 +473,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-1", 4 ],
 									"order" : 2,
-									"source" : [ "obj-6", 0 ]
+									"source" : [ "obj-10", 1 ]
 								}
 
 							}
@@ -490,7 +481,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-1", 2 ],
 									"order" : 3,
-									"source" : [ "obj-6", 0 ]
+									"source" : [ "obj-10", 1 ]
 								}
 
 							}
@@ -604,6 +595,7 @@
  ],
 		"parameters" : 		{
 			"obj-1::obj-1::obj-72" : [ "toggle[1]", "toggle", 0 ],
+			"obj-2::obj-10::obj-99::obj-12::obj-47::obj-20::obj-72" : [ "toggle[13]", "toggle", 0 ],
 			"obj-2::obj-2::obj-1::obj-33::obj-99::obj-12::obj-47::obj-20::obj-72" : [ "toggle", "toggle", 0 ],
 			"obj-2::obj-2::obj-1::obj-8::obj-105::obj-12" : [ "implementParent", "implementParent", 0 ],
 			"obj-2::obj-2::obj-1::obj-8::obj-4::obj-10" : [ "RotY", "RotY", 0 ],
@@ -741,14 +733,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.app.contexter.winrect.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/app",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/app",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.app.contexter.winrect.abs.maxpat",
+				"name" : "bs.app.contexter.maxpat",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/app",
 				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/app",
 				"type" : "JSON",
@@ -889,13 +874,6 @@
 			}
 , 			{
 				"name" : "bs.app.output.editor.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/app",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/app",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.app.contexter.maxpat",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/app",
 				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/app",
 				"type" : "JSON",
@@ -1059,6 +1037,13 @@
 				"name" : "bs.app.pattrMirror.js",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/javascript/app",
 				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/javascript/app",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.ossia.reflect.js",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/javascript/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/javascript/ossia",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -1322,12 +1307,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "dozer.mov",
-				"bootpath" : "C74:/media/jitter",
-				"type" : "MooV",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "bs.node.Grid.maxpat",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/nodes/ossia",
 				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/nodes/ossia",
@@ -1482,11 +1461,29 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "bs.node.Video.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/nodes/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/nodes/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.util.special.render.gate.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/utils",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/utils",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "settings.xml",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_settings/_project/_TextureProjectory_Multiple",
 				"patcherrelativepath" : "./_settings/_project/_TextureProjectory_Multiple",
 				"type" : "TEXT",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "mxj.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "bs.msg.send.mxo",

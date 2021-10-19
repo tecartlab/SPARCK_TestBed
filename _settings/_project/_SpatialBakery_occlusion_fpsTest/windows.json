@@ -62,16 +62,6 @@
 
 	}
 ,
-	"bs_gui_win_ShrdTexProj_P_Light" : 	{
-		"_pin" : 0,
-		"_type" : "Light",
-		"_slotsize" : 65
-	}
-,
-	"bs_gui_win_Video_1_P_Moovie" : 	{
-		"_pin" : 0,
-		"_type" : "Moovie",
-		"_slotsize" : 65
-	}
-
+	"_slotspot_Unkown" : 0,
+	"_slotspot_Unkown_counter" : 1
 }

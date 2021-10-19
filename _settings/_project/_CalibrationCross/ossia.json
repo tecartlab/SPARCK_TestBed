@@ -1,0 +1,21 @@
+{
+	"current" : 	{
+		"node/CalibrationCross/enable" : 1.0,
+		"node/CalibrationCross/depth/enable" : 1.0,
+		"node/CalibrationCross/depth/layer" : 10,
+		"node/CalibrationCross/internal/body" : "expand",
+		"node/CalibrationCross/internal/nodeid" : "1628_id",
+		"node/CalibrationCross/marker/color" : [ 1.0, 1.0, 1.0, 1.0 ],
+		"node/CalibrationCross/marker/size" : 0.045,
+		"node/CalibrationCross/marker/x/negative" : -1.0,
+		"node/CalibrationCross/marker/x/positive" : 1.0,
+		"node/CalibrationCross/marker/y/negative" : -1.0,
+		"node/CalibrationCross/marker/y/positive" : 1.0,
+		"node/CalibrationCross/marker/z/negative" : -1.85,
+		"node/CalibrationCross/marker/z/positive" : 2.0,
+		"node/CalibrationCross/render/renderGroup" : [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+		"node/CalibrationCross/render/showaxis" : 1.0,
+		"node/CalibrationCross/tfm/parent" : "<none>"
+	}
+
+}

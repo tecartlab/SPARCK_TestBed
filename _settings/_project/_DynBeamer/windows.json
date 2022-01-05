@@ -14,7 +14,7 @@
 	}
 ,
 	"bs_gui_win_Beamer_C_BeamerSetup" : 	{
-		"_pin" : 0,
+		"_pin" : 1,
 		"_type" : "BeamerSetup",
 		"_slotsize" : 45,
 		"Main" : 		{

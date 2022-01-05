@@ -12,5 +12,11 @@
 		"_type" : "Canvas",
 		"_slotsize" : 65
 	}
+,
+	"bs_gui_win_QueScript_PB_ProgressBar" : 	{
+		"_pin" : 0,
+		"_type" : "ProgressBar",
+		"_slotsize" : 45
+	}
 
 }

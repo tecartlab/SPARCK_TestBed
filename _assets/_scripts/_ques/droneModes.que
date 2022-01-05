@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<script>
+	<var name="droneA_trackedPos">ARRAY(0, 0, 0)</var>
+	<var name="droneA_targetPos">ARRAY(3, -3, 3)</var>
+	<var name="droneA_deltaZ">5.</var>
+	<que name="PARK" loop="no">
+		<expr>{:droneA_deltaPos -> ARRAY(0, 0, droneA_deltaZ)}</expr>
+		<expr>{:droneA_hoverPos -> droneA_deltaPos + droneA_targetPos}</expr>
+		<timer/><!-- starts the internal timer -->
+		<print>Parking Test Started</print>
+		<anim name="park" loop="palindrome" duration="5s">
+			<track name="f1">0 1</track>
+			<expr>{:Result = LERP(f1, droneA_trackedPos, droneA_hoverPos)}</expr>
+			<debugger scope="local"/>
+			<print>{'/testbed'} results at {f1} in {Result[0]} {Result[1]} {Result[2]}</print>
+		</anim>
+		<wait anim="park"/>
+		<print>Performance Test Finished</print>
+		<stop/>
+	</que>
+	<que name="SUBTRACT" loop="no">
+		<var name="valueA">ARRAY(0, 0, 0)</var>
+		<var name="valueB">ARRAY(10, 10, 10)</var>
+		<var name="valueC">20</var>
+		<expr>{:ResultA -> valueA - valueB}</expr>
+		<expr>{:ResultB -> ResultA - valueC}</expr>
+		<print>{'ResultA :' + ResultA} = [-10, -10, -10]</print>
+		<print>{'ResultB :' + ResultB} = [-30, -30, -30]</print>
+		<stop/>
+	</que>
+</script>

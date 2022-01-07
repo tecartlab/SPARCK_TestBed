@@ -1,0 +1,22 @@
+{
+	"bs_gui_win_fps-graph_S_Solver" : 	{
+		"_pin" : 0,
+		"_type" : "Solver",
+		"_slotsize" : 45
+	}
+,
+	"_storenames" : "Main",
+	"_slotspot" : 0,
+	"bs_gui_win_Mask_P_Canvas" : 	{
+		"_pin" : 0,
+		"_type" : "Canvas",
+		"_slotsize" : 65
+	}
+,
+	"bs_gui_win_TextureMask_P_Canvas" : 	{
+		"_pin" : 0,
+		"_type" : "Canvas",
+		"_slotsize" : 65
+	}
+
+}

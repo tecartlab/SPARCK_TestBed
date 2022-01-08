@@ -191,6 +191,28 @@
 									"clickthrough" : 0,
 									"enablehscroll" : 0,
 									"enablevscroll" : 0,
+									"id" : "obj-4",
+									"lockeddragscroll" : 0,
+									"lockedsize" : 0,
+									"maxclass" : "bpatcher",
+									"name" : "bs.node.ShaderBrCoSa.maxpat",
+									"numinlets" : 4,
+									"numoutlets" : 4,
+									"offset" : [ 0.0, 0.0 ],
+									"outlettype" : [ "", "jit_gl_texture", "jit_gl_texture", "" ],
+									"patching_rect" : [ 286.0, 133.0, 242.0, 146.0 ],
+									"varname" : "ShdrBrCoSa",
+									"viewvisibility" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgmode" : 0,
+									"border" : 0,
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
 									"id" : "obj-3",
 									"lockeddragscroll" : 0,
 									"lockedsize" : 0,
@@ -222,7 +244,7 @@
 									"numoutlets" : 4,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 286.0, 134.0, 242.0, 186.0 ],
+									"patching_rect" : [ 291.0, 295.0, 180.0, 36.0 ],
 									"varname" : "Canvas",
 									"viewvisibility" : 1
 								}
@@ -254,8 +276,15 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 1 ],
+									"destination" : [ "obj-4", 1 ],
 									"source" : [ "obj-3", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 1 ],
+									"source" : [ "obj-4", 1 ]
 								}
 
 							}
@@ -877,104 +906,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.props.Canvas.p.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/nodes/ossia",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/nodes/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.rendergroup.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia/rendergroup",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia/rendergroup",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.js",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/javascript/ossia",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/javascript/ossia",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.menu.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.toggle.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.int.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.tfm.local.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia/transforms",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia/transforms",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.vec3f.XYZ.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia/transforms",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia/transforms",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.float.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.vec3f.XYZ.set.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia/transforms",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia/transforms",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.select.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.color.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.vec2i.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "2int.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia/basic/util",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia/basic/util",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "bs.util.render.pass.reciever.maxpat",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/utils",
 				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/utils",
@@ -1031,9 +962,65 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "bs.ossia.remote.menu.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.ossia.remote.js",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/javascript/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/javascript/ossia",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.ossia.remote.toggle.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.ossia.remote.select.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.node.ShaderBrCoSa.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/nodes/ossia/shaders",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/nodes/ossia/shaders",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.props.ShaderBrCoSa.p.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/nodes/ossia/shaders",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/nodes/ossia/shaders",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.ossia.remote.float.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.ossia.remote.impulse.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "settings.xml",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_settings/_project/_ShaderBrCoSa",
-				"patcherrelativepath" : "./_settings/_project/_ShaderBrCoSa",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_settings/_project/_Texture",
+				"patcherrelativepath" : "./_settings/_project/_Texture",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -1071,10 +1058,6 @@
 			}
 , 			{
 				"name" : "ossia.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "icst.intui.mxo",
 				"type" : "iLaX"
 			}
 , 			{

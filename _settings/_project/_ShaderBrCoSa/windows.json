@@ -1,0 +1,10 @@
+{
+	"bs_gui_win_fps-graph_S_Solver" : 	{
+		"_pin" : 0,
+		"_type" : "Solver",
+		"_slotsize" : 45
+	}
+,
+	"_storenames" : "Main",
+	"_slotspot" : 0
+}

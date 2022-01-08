@@ -12,7 +12,7 @@
 		"node/Canvas/blend/mode" : "alphablend",
 		"node/Canvas/depth/enable" : 1.0,
 		"node/Canvas/depth/layer" : 0,
-		"node/Canvas/internal/body" : "fold",
+		"node/Canvas/internal/body" : "collapse",
 		"node/Canvas/internal/nodeid" : "3296_id",
 		"node/Canvas/internal/bake/enable" : 0.0,
 		"node/Canvas/lighting/enable" : 0.0,
@@ -68,16 +68,26 @@
 		"node/Grid/tfm/local/pos" : [ 0.0, -0.61, 0.0 ],
 		"node/Grid/tfm/local/rot" : [ 0.0, 0.0, 0.0 ],
 		"node/Grid/tfm/local/scale" : [ 1.0, 1.0, 1.0 ],
+		"node/ShdrBrCoSa/alpha" : 1.0,
+		"node/ShdrBrCoSa/avg_luma" : 2.15,
+		"node/ShdrBrCoSa/brightness" : 0.65,
+		"node/ShdrBrCoSa/contrast" : 0.81,
+		"node/ShdrBrCoSa/enable" : 1.0,
+		"node/ShdrBrCoSa/renderOne" : 1.0,
+		"node/ShdrBrCoSa/renderTwo" : 0.0,
+		"node/ShdrBrCoSa/saturation" : 1.0,
+		"node/ShdrBrCoSa/internal/body" : "expand",
+		"node/ShdrBrCoSa/internal/nodeid" : "3273_id",
 		"node/Texture/enable" : 1.0,
 		"node/Texture/flip" : 0.0,
 		"node/Texture/image/filewatch" : 0.0,
-		"node/Texture/image/file" : "resolution_test_1080.png",
+		"node/Texture/image/file" : "maxresdefault.jpg",
 		"node/Texture/image/file/path" : "*",
 		"MacintoshHD" : "/Users/maybites/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_assets/_textures",
 		"node/Texture/image/default" : "checker",
 		"node/Texture/internal/body" : "expand",
 		"node/Texture/internal/nodeid" : "3284_id",
-		"node/Texture/render/pass" : "manualA"
+		"node/Texture/render/pass" : "passA"
 	}
 
 }

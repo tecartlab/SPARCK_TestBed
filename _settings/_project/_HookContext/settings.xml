@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<pattrstorage name = "settings">
+	<slot number = "1">
+		<patcher name = "Application_sparck">
+			<pattr name = "editor" value = "1" />
+			<pattr name = "mainMetro" value = "&quot;30 hz&quot;" />
+			<pattr name = "mainSwitch" value = "1" />
+			<patcher name = "_properties">
+				<pattr name = "preferences" value = "1" />
+			</patcher>
+			<patcher name = "Editor">
+				<patcher name = "patcher">
+					<pattr name = "position" value = "rect 21 453 583 860" />
+				</patcher>
+			</patcher>
+			<patcher name = "3DViewer">
+				<pattr name = "_enable" value = "1" />
+				<patcher name = "_orbiter">
+					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
+					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0.233438 -0.972347" />
+					<pattr name = "orbitThreePosition" value = "position 0. 0. 19.55" />
+					<pattr name = "orbitTwoQuat" value = "quat 0.551925 0. 0. 0.833867" />
+				</patcher>
+				<patcher name = "_setgroupstage">
+					<pattr name = "matrix" value = "0 0 0" />
+					<pattr name = "stagebutton" value = "1" />
+				</patcher>
+				<patcher name = "_storePosition">
+					<patcher name = "patcher">
+						<pattr name = "position" value = "rect 21 45 587 429" />
+					</patcher>
+				</patcher>
+			</patcher>
+		</patcher>
+		<patcher name = "workspace">
+			<pattr name = "text3d" value = "Hooking up Jitter objects into sparck contexts? Yes, thats possible." />
+		</patcher>
+	</slot>
+</pattrstorage>
+

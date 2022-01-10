@@ -155,7 +155,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 639.0, 321.0, 710.0, 323.0 ],
+						"rect" : [ 639.0, 321.0, 760.0, 468.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -191,17 +191,39 @@
 									"clickthrough" : 0,
 									"enablehscroll" : 0,
 									"enablevscroll" : 0,
-									"id" : "obj-4",
+									"id" : "obj-7",
 									"lockeddragscroll" : 0,
 									"lockedsize" : 0,
 									"maxclass" : "bpatcher",
-									"name" : "bs.node.ShaderBlur.maxpat",
+									"name" : "bs.node.DrawMask.maxpat",
+									"numinlets" : 2,
+									"numoutlets" : 4,
+									"offset" : [ 0.0, 0.0 ],
+									"outlettype" : [ "", "jit_gl_texture", "", "" ],
+									"patching_rect" : [ 501.0, 7.0, 242.0, 126.0 ],
+									"varname" : "DrawMask",
+									"viewvisibility" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgmode" : 0,
+									"border" : 0,
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
+									"id" : "obj-6",
+									"lockeddragscroll" : 0,
+									"lockedsize" : 0,
+									"maxclass" : "bpatcher",
+									"name" : "bs.node.ShaderTexOP.maxpat",
 									"numinlets" : 4,
 									"numoutlets" : 4,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "", "jit_gl_texture", "", "" ],
-									"patching_rect" : [ 250.0, 133.0, 242.0, 86.0 ],
-									"varname" : "ShdrBlur",
+									"patching_rect" : [ 250.0, 166.0, 242.0, 170.0 ],
+									"varname" : "ShdrOP",
 									"viewvisibility" : 1
 								}
 
@@ -244,7 +266,7 @@
 									"numoutlets" : 4,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 250.0, 236.0, 180.0, 36.0 ],
+									"patching_rect" : [ 270.666666666666629, 358.0, 180.0, 36.0 ],
 									"varname" : "Canvas",
 									"viewvisibility" : 1
 								}
@@ -276,7 +298,7 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-4", 1 ],
+									"destination" : [ "obj-6", 1 ],
 									"source" : [ "obj-3", 1 ]
 								}
 
@@ -284,7 +306,14 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-1", 1 ],
-									"source" : [ "obj-4", 1 ]
+									"source" : [ "obj-6", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 2 ],
+									"source" : [ "obj-7", 1 ]
 								}
 
 							}
@@ -401,6 +430,7 @@
 			"obj-1::obj-1::obj-72" : [ "toggle[1]", "toggle", 0 ],
 			"obj-2::obj-1::obj-10::obj-99::obj-12::obj-47::obj-20::obj-72" : [ "toggle[2]", "toggle", 0 ],
 			"obj-2::obj-3::obj-99::obj-12::obj-47::obj-20::obj-72" : [ "toggle", "toggle", 0 ],
+			"obj-2::obj-7::obj-32::obj-38::obj-12::obj-47::obj-20::obj-72" : [ "toggle[3]", "toggle", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -990,23 +1020,16 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.node.ShaderBlur.maxpat",
+				"name" : "bs.node.ShaderTexOP.maxpat",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/nodes/ossia/shaders",
 				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/nodes/ossia/shaders",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.props.ShaderBlur.p.maxpat",
+				"name" : "bs.props.ShaderTexOP.p.maxpat",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/nodes/ossia/shaders",
 				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/nodes/ossia/shaders",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.int.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1025,9 +1048,51 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "bs.node.DrawMask.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/nodes/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/nodes/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.props.DrawMask.p.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/nodes/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/nodes/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.ossia.remote.vec2i.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "2int.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia/basic/util",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia/basic/util",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.node.draw.editor.js",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/javascript/nodes",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/javascript/nodes",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.util.editorGate.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/utils",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/utils",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "settings.xml",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_settings/_project/_ShaderBlur",
-				"patcherrelativepath" : "./_settings/_project/_ShaderBlur",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_settings/_project/_ShaderTexOP",
+				"patcherrelativepath" : "./_settings/_project/_ShaderTexOP",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -1068,11 +1133,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "icst.intui.mxo",
+				"name" : "icst.floatui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "icst.floatui.mxo",
+				"name" : "icst.intui.mxo",
 				"type" : "iLaX"
 			}
 , 			{

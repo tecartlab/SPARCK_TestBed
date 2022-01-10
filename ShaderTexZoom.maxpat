@@ -155,7 +155,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 639.0, 321.0, 710.0, 323.0 ],
+						"rect" : [ 639.0, 321.0, 710.0, 468.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -195,13 +195,13 @@
 									"lockeddragscroll" : 0,
 									"lockedsize" : 0,
 									"maxclass" : "bpatcher",
-									"name" : "bs.node.ShaderBlur.maxpat",
+									"name" : "bs.node.ShaderTexZoom.maxpat",
 									"numinlets" : 4,
 									"numoutlets" : 4,
 									"offset" : [ 0.0, 0.0 ],
-									"outlettype" : [ "", "jit_gl_texture", "", "" ],
-									"patching_rect" : [ 250.0, 133.0, 242.0, 86.0 ],
-									"varname" : "ShdrBlur",
+									"outlettype" : [ "", "jit_gl_texture", "jit_gl_texture", "" ],
+									"patching_rect" : [ 250.0, 132.0, 242.0, 206.0 ],
+									"varname" : "ShdrZoom",
 									"viewvisibility" : 1
 								}
 
@@ -244,7 +244,7 @@
 									"numoutlets" : 4,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 250.0, 236.0, 180.0, 36.0 ],
+									"patching_rect" : [ 250.0, 372.0, 180.0, 36.0 ],
 									"varname" : "Canvas",
 									"viewvisibility" : 1
 								}
@@ -990,30 +990,16 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.node.ShaderBlur.maxpat",
+				"name" : "bs.node.ShaderTexZoom.maxpat",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/nodes/ossia/shaders",
 				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/nodes/ossia/shaders",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.props.ShaderBlur.p.maxpat",
+				"name" : "bs.props.ShaderTexZoom.p.maxpat",
 				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/nodes/ossia/shaders",
 				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/nodes/ossia/shaders",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.int.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.float.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
-				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1025,9 +1011,23 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "bs.ossia.remote.vec2f.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "2float.maxpat",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/01_dev/app_sparck/sparck/patchers/ossia/basic/util",
+				"patcherrelativepath" : "../../01_dev/app_sparck/sparck/patchers/ossia/basic/util",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "settings.xml",
-				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_settings/_project/_ShaderBlur",
-				"patcherrelativepath" : "./_settings/_project/_ShaderBlur",
+				"bootpath" : "~/Arbeiten/01_projekte/150816_SPARCK/00_projects/_testbed/_settings/_project/_ShaderTexZoom",
+				"patcherrelativepath" : "./_settings/_project/_ShaderTexZoom",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -1065,10 +1065,6 @@
 			}
 , 			{
 				"name" : "ossia.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "icst.intui.mxo",
 				"type" : "iLaX"
 			}
 , 			{

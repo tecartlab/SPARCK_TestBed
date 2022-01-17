@@ -1,0 +1,9 @@
+{
+	"_storenames" : "Main",
+	"bs_gui_win_ShdrReyMarcher_P_Camera" : 	{
+		"_pin" : 0,
+		"_type" : "Camera",
+		"_slotsize" : 22
+	}
+
+}

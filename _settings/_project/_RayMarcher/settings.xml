@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<pattrstorage name = "settings">
+	<slot number = "1">
+		<patcher name = "Application_sparck">
+			<pattr name = "editor" value = "0" />
+			<pattr name = "mainMetro" value = "&quot;30 hz&quot;" />
+			<pattr name = "mainSwitch" value = "1" />
+			<patcher name = "_properties">
+				<pattr name = "preferences" value = "1" />
+			</patcher>
+			<patcher name = "Editor">
+				<patcher name = "patcher">
+					<pattr name = "position" value = "rect 5 410 545 695" />
+				</patcher>
+			</patcher>
+			<patcher name = "3DViewer">
+				<pattr name = "_enable" value = "1" />
+				<patcher name = "_orbiter">
+					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
+					<pattr name = "orbitOneQuat" value = "quat 0. 0. -0.529918 0.848046" />
+					<pattr name = "orbitThreePosition" value = "position 0. 0. 2.55" />
+					<pattr name = "orbitTwoQuat" value = "quat 0.522498 0. 0. 0.852639" />
+				</patcher>
+				<patcher name = "_setgroupstage">
+					<pattr name = "matrix" value = "0 0 0" />
+					<pattr name = "stagebutton" value = "1" />
+				</patcher>
+				<patcher name = "_storePosition">
+					<patcher name = "patcher">
+						<pattr name = "position" value = "rect 5 48 545 380" />
+					</patcher>
+				</patcher>
+			</patcher>
+		</patcher>
+		<patcher name = "workspace">
+			<patcher name = "ShdrReyMarcher">
+				<patcher name = "parameter">
+					<patcher name = "A">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "B">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "C">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "D">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "E">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "F">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "G">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "H">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "I">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "J">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "K">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "L">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "M">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "N">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "O">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+					<patcher name = "P">
+						<pattr name = "val0" value = "0." />
+						<pattr name = "val1" value = "0." />
+						<pattr name = "val2" value = "0." />
+						<pattr name = "val3" value = "0." />
+					</patcher>
+				</patcher>
+			</patcher>
+		</patcher>
+	</slot>
+</pattrstorage>
+

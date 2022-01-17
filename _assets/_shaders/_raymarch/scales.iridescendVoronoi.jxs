@@ -1,0 +1,368 @@
+<jittershader name="ray.template.jxs">
+	<description>SPARCK - ShaderTemplate - (c) 2017 by maybites</description>
+
+	<param name="sprk_worldMatrix" type="mat4" state="WORLD_MATRIX" />
+	<param name="sprk_rotMatrix" type="mat4" default="0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0." />
+	<param name="sprk_viewPos" type="vec3" default="0. 0. 0." description="test"/>
+	<param name="sprk_worldRefPos" type="vec3" default="0. 0. 0." description="test"/>
+	<param name="sprk_globalTime" type="float" default="0." />
+	<param name="sprk_scale" type="float" default="1." />
+
+	<param name="tex0" type="int" default="0" />
+	<param name="tex1" type="int" default="1" />
+
+    <!-- COMMENT: add here your own parameters...
+
+    copy and modify the following lines outsite of this comment section:
+
+	<param name="myVeryOwnFloat" type="float" default="1." description="Use_underscore_for_spaces_to_seperate_'words'"/>
+	<param name="myVeryOwnVec3" type="vec3" default="0. 0. 0." description="text with spaces will only show up as 'text'"/>
+
+    you can use parameters of the following types:
+
+        TYPES       GUI     QUE
+
+        -float      y       y
+        -vec2       y       y
+        -vec3       y       y
+        -vec4       y       y
+        -mat3       -       y
+        -mat4       -       y
+
+        DON'T USE int: it is reserved for textures!!
+
+    GUI: The RayMarching Node will scan the parameters and tries to make them accessible through the userinterface
+    QUE: These parameters can be sent to this shader via OSC or QueScript.
+
+    ...Dont forget to bind it the shader: END OF COMMENT-->
+
+	<language name="glsl" version="1.2">
+		<bind param="sprk_worldMatrix" program="vp" />
+		<bind param="sprk_rotMatrix" program="fp" />
+		<bind param="sprk_scale" program="fp" />
+		<bind param="sprk_viewPos" program="fp" />
+		<bind param="sprk_worldRefPos" program="fp" />
+		<bind param="sprk_globalTime" program="fp" />
+
+		<bind param="tex0" program="fp" />
+		<bind param="tex1" program="fp" />
+
+        <!-- COMMENT: bind your own parameters here to the vertex shader (vp) and/or fragment shader (fp)
+
+        copy and modify the following lines outsite of this comment section:
+
+        <bind param="myVeryOwnFloat" program="fp" />
+        <bind param="myVeryOwnVec3" program="fp" />
+
+        ...until here.-->
+
+		<program name="vp" type="vertex">
+<![CDATA[
+
+// >>>>> ================================
+// >>>>> DO NOT CHANGE ANYTHING FROM HERE
+// >>>>> ================================
+
+#version 120
+
+uniform mat4 sprk_worldMatrix;
+uniform mat4 sprk_rotMatrix;
+
+varying vec3 sprk_normal;	// surface normal
+varying vec3 sprk_localPos;	// vertex local position
+varying vec3 sprk_worldPos;	// vertex world position
+
+varying vec2 sprk_texcoord0;
+varying vec2 sprk_texcoord1;
+varying vec2 sprk_texdim0;
+varying vec2 sprk_texdim1;
+
+void main(void)
+{
+	// perform standard transform on vertex (general approach)
+	gl_Position = ftransform();
+
+	gl_TexCoord[0]  = gl_TextureMatrix[0] * gl_MultiTexCoord0;
+
+	sprk_normal = normalize(mat3(sprk_worldMatrix) * gl_Normal);
+	sprk_localPos = vec3(sprk_rotMatrix * gl_Vertex);
+	sprk_worldPos = vec3(sprk_worldMatrix * gl_Vertex);
+
+	// transform texcoords
+    sprk_texcoord0 = vec2(gl_TextureMatrix[0] * gl_MultiTexCoord0);
+    sprk_texcoord1 = vec2(gl_TextureMatrix[1] * gl_MultiTexCoord1);
+    // extract the x and y scalars from the texture matrix to determine dimensions
+    sprk_texdim0 = vec2 (abs(gl_TextureMatrix[0][0][0]),abs(gl_TextureMatrix[0][1][1]));
+    sprk_texdim1 = vec2 (abs(gl_TextureMatrix[1][0][0]),abs(gl_TextureMatrix[1][1][1]));
+}
+
+]]>
+		</program>
+		<program name="fp" type="fragment">
+<![CDATA[
+
+uniform vec3 sprk_viewPos; 			// point of view position
+uniform vec3 sprk_worldRefPos;      // reference position of this virtual world
+uniform mat4 sprk_rotMatrix; 		// rotation matrix
+uniform float sprk_scale;			// viewline scale
+uniform float sprk_globalTime; 		// time
+
+varying vec3 sprk_normal;			// surface normal
+varying vec3 sprk_worldPos;			// vertex world position
+varying vec3 sprk_localPos;			// vertex local position
+
+// samplers
+uniform sampler2DRect tex0;			// texture reference for texture 0
+uniform sampler2DRect tex1;			// texture reference for texture 1
+
+// texcoords
+varying vec2 sprk_texcoord0;		// texture coordinate for texture 0
+varying vec2 sprk_texdim0;			// texture dimension for texture 0
+varying vec2 sprk_texcoord1;		// texture coordinate for texture 1
+varying vec2 sprk_texdim1;			// texture dimension for texture 0
+
+// ================================= <<<<<<
+// ...................... UNTIL HERE <<<<<<
+// ================================= <<<<<<
+
+// From here onwards will be your custom code...
+
+// *************************************************************************
+//
+// Created by:  aiekick
+//		https://www.shadertoy.com/view/ttlSDl
+//
+// *************************************************************************
+
+// Add here your own parameters
+
+uniform float myVeryOwnFloat;
+uniform vec3 myVeryOwnVec3;
+
+// If your old shader code came from shadertoy.com and used mouse interaction,
+// these values will usually lead to good results
+// since we dont need them anymore they can be static.
+
+vec2 iMouse = vec2(0.5, 0.5);
+vec2 iResolution = vec2(1, 1);
+float iGlobalTime = sprk_globalTime;
+float iTime = sprk_globalTime;
+
+// >>>>>>>>>>>>>>>>>>>>>>
+
+// base code from shane : https://www.shadertoy.com/view/4sdcDN
+// fork of my : https://www.shadertoy.com/view/tslXWX
+
+const float _threshold = 0.0;
+const vec3 _cellColor = vec3(0.2,0.6,0.7);
+const float _zoom = 1.0;
+
+float objID; // The rounded web lattice, or the individual Voronoi cells.
+vec2 cellID;
+
+mat2 r2(in float a){ float c = cos(a), s = sin(a); return mat2(c, -s, s, c); }
+
+float smin2(float a, float b, float r)
+{
+   float f = max(0., 1. - abs(b - a)/r);
+   return min(a, b) - r*.25*f*f;
+}
+
+vec2 hash22H(vec2 p)
+{
+    float n = sin(dot(p, vec2(41, 289)));
+    p = fract(vec2(262144, 32768)*n);
+    return sin( p*6.2831853 + iTime )*.3660254 + .5;
+}
+
+vec2 pixToHex(vec2 p)
+{
+    return floor(vec2(p.x + .57735*p.y, 1.1547*p.y));
+}
+
+vec2 hexPt(vec2 p)
+{
+    return vec2(p.x - p.y*.5, .866025*p.y) + (hash22H(p) - .5)*.866025/2.;
+
+}
+
+vec3 Voronoi(vec2 p)
+{
+    vec2 pH = pixToHex(p); // Map the pixel to the hex grid.
+		vec2 hp[7];
+		hp[0] = vec2(-1);
+		hp[1] = vec2(0, -1);
+		hp[2] = vec2(-1, 0);
+		hp[3] = vec2(0);
+		hp[4] = vec2(1);
+		hp[5] = vec2(1, 0);
+		hp[6] = vec2(0, 1);
+    vec2 minCellID = vec2(0); // Redundant initialization, but I've done it anyway.
+		vec2 mo, o;
+    float md = 8., lMd = 8., lMd2 = 8., lnDist, d;
+    for (int i=0; i<7; i++)
+		{
+        vec2 h = hexPt(pH + hp[i]) - p;
+    	d = dot(h, h);
+    	if( d<md )
+		{
+            md = d;  // Update the minimum distance.
+            mo = h;
+            minCellID = hp[i]; // Record the minimum distance cell ID.
+        }
+    }
+
+	float r = mix(0.0,0.4,sin(iTime * 0.5)*0.5+0.5);
+
+	r = mix(0.0,0.4,iMouse.x/iResolution.x);
+
+    for (int i=0; i<7; i++)
+	{
+        vec2 h = hexPt(pH + hp[i] + minCellID) - p - mo; // Note the "-mo" to save some operations.
+        if(dot(h, h)>.00001){
+            lnDist = dot(mo + h*.5, normalize(h));
+            lMd = smin2(lMd, lnDist, (lnDist*.5 + .5)*r);
+            lMd2 = min(lMd2, lnDist);
+			cellID = vec2(lMd);
+        }
+    }
+
+    float t = iTime * 5.;
+    d = lMd * 25.;
+    mo -= vec2(cos(d + t),sin(d + t)) / d;
+    lMd2 = length(mo);
+
+    return max(vec3(lMd, lMd2, md), 0.);
+}
+
+float bumpFunc(vec2 p)
+{
+    vec3 v = Voronoi(p);
+    float c = v.x; // Rounded edge value.
+    float ew = _threshold; // Border threshold value. Bigger numbers mean thicker borders.
+    if(c<ew)
+	{
+        objID = 1.; // Voronoi web border ID.
+        c = abs(c - ew)/ew; // Normalize the domain to a range of zero to one.
+        c = smoothstep(0., .25, c)/4. + clamp(-cos(c*6.283*1.5) - .5, 0., 1.);
+    }
+    else
+	{ // Over the threshold? Use the regular Voronoi cell value.
+        objID = 0.;
+        c = mix(v.x,  v.y, .75); // A mixture of rounded and straight edge values.
+        c = (c - ew)/(1. - ew); // Normalize the domain to a range of zero to one.
+        c = clamp(c + cos(c*6.283*24.)*.002, 0., 1.); // Add some ridges.
+    }
+    return c; // Return the object (bordered Voronoi) value.
+}
+
+// <<<<<<<<<<<<<<<<<<<<<<
+
+
+// the main function needs to look like this:
+
+void main() {
+    // It should start with the following code block
+
+    // =================  DO NOT CHANGE THIS CODE  =============================
+	vec4 sprk_vl_raw = vec4(sprk_worldPos - sprk_viewPos - sprk_worldRefPos, 1);
+	vec3 sprk_vl_dir = (sprk_rotMatrix * sprk_vl_raw).xyz;
+	vec3 sprk_ray    = normalize(sprk_vl_dir) * sprk_scale;
+    // =================  DO NOT CHANGE THIS CODE  =============================
+
+    // usefull variables that are controlled by the RayMarching Node are:
+
+    //  sprk_ray        (vec3) -> it is THE RAY
+    //  sprk_viewPos;   (vec3) -> the world postion of your eye
+    //  sprk_localPos   (vec3) -> the place where the ray hits the canvas. (local coordinate system)
+    //  sprk_worldPos   (vec3) -> the place where the ray hits the canvas. (global coordinate system)
+    //  sprk_rotMatrix  (mat4) -> rotates the ray around itself
+    //  sprk_scale      (float)-> scales the ray
+    //  sprk_globalTime (float)-> the global time in seconds
+
+	// example code for gathering texture color:
+
+    //vec3 sprk_texColor0   = texture2DRect(tex0, sprk_texcoord0).rgb;
+    //vec3 sprk_texColor1   = texture2DRect(tex1, sprk_texcoord1).rgb;
+
+    // >>>>>>>>>>>>>>>>>>>>>>
+
+		vec2 fragCoord = sprk_texcoord0.xy;
+		float iTime = sprk_globalTime;
+
+		cellID = vec2(0);
+		vec2 uv = vec2((fragCoord.x) / 0.5, fragCoord.y - .5);// / iResolution.y;
+//		vec2 uv = (fragCoord - iResolution.xy*.5)/min(iResolution.y, 800.) * _zoom;
+	    vec2 aspect = vec2(iResolution.y/iResolution.x, 1);
+	    uv *= 1. + dot(uv*aspect, uv*aspect)*.05;
+	    vec3 r = normalize(vec3(uv.xy, 1.));
+	    vec2 p = uv*7.5 + vec2(0, iTime*.5);
+	    float c = bumpFunc(p);
+	    float svObjID = objID;
+	    vec3 sp = vec3(p, 0.);
+	    vec3 lp = sp + vec3(-1.3*sin(iTime/2.), .8*cos(iTime/2.), -.5);
+	    vec3 lp2 = sp + vec3(1.3*sin(iTime/2.), -.8*cos(iTime/2.), -.5);
+	    sp.z -= c*.1;
+	    vec2 e = vec2(8./iResolution.y, 0); // Sample spred.
+	    float bf = .4; // Bump factor.
+	    if (svObjID>.5) { e.x = 2./iResolution.y; }
+	    float fx = (bumpFunc(p - e) - bumpFunc(p + e)); // Nearby horizontal samples.
+	    float fy = (bumpFunc(p - e.yx) - bumpFunc(p + e.yx)); // Nearby vertical samples.
+		vec3 n = normalize(vec3(fx, fy, -e.x/bf)); // Bumped normal.
+	    float edge = abs(c*2. - fx) + abs(c*2. - fy); // Edge value.
+			//vec3 tx = texture2DRect(tex0, (p + n.xy*.125)*.25).xyz; tx *= tx; // sRGB to linear.
+			vec3 tx = vec3(p.x, n.x*.125, n.y *.125); // sRGB to linear.
+	    tx = smoothstep(0., .5, tx); // Accentuating the color a bit.
+	    vec3 oCol = tx;
+	    if(svObjID>.5)
+		{
+	        oCol *= 1.-_cellColor;
+	    }
+	    else
+		{
+	        oCol *= _cellColor;
+	    }
+
+		oCol.xy *= cellID * 10.;
+
+	    float lDist = length(lp - sp); // Light distance one.
+	    float atten = 1./(1. + lDist*lDist*.5); // Light one attenuation.
+	    vec3 l = (lp - sp)/max(lDist, .001); // Light one direction (normalized).
+		float diff = max(max(dot(l, n), 0.), 0.); // Diffuse value one.
+	    float spec = pow(max(dot(reflect(l, n), r), 0.), 64.); // Specular value one.
+
+	    float lDist2 = length(lp2 - sp); // Light distance two.
+	    float atten2 = 1./(1. + lDist2*lDist2*.5); // Light two attenuation.
+	    vec3 l2 = (lp2 - sp)/max(lDist2, .001); // Light two direction (normalized).
+		float diff2 = max(max(dot(l2, n), 0.), 0.); // Diffuse value two.
+	    float spec2 = pow(max(dot(reflect(l2, n), r), 0.), 64.); // Specular value twp.
+
+	    diff = pow(diff, 4.)*2.;
+	    diff2 = pow(diff2, 4.)*2.;
+
+	    vec3 col = oCol*(diff*vec3(.5, .7, 1) + .25 + vec3(.25, .5, 1)*spec*32.)*atten*.5;
+
+	    col += oCol*(diff2*vec3(1, .7, .5) + .25 + vec3(1, .3, .1)*spec2*32.)*atten2*.5;
+
+		if(svObjID>.5)
+		{
+	        col *= edge;
+	    }
+	    else
+		{
+	        col /= edge;
+	    }
+
+	    vec2 u = fragCoord/iResolution.xy;
+	    col *= pow(16.*u.x*u.y*(1. - u.x)*(1. - u.y) , .125);
+
+	    gl_FragColor = vec4(sqrt(max(col, 0.)), 1);
+    // <<<<<<<<<<<<<<<<<<<<<<
+
+}
+
+
+]]>
+		</program>
+	</language>
+</jittershader>

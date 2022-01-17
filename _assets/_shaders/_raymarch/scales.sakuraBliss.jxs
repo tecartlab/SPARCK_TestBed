@@ -1,0 +1,371 @@
+<jittershader name="ray.template.jxs">
+	<description>SPARCK - ShaderTemplate - (c) 2017 by maybites</description>
+
+	<param name="sprk_worldMatrix" type="mat4" state="WORLD_MATRIX" />
+	<param name="sprk_rotMatrix" type="mat4" default="0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0." />
+	<param name="sprk_viewPos" type="vec3" default="0. 0. 0." description="test"/>
+	<param name="sprk_worldRefPos" type="vec3" default="0. 0. 0." description="test"/>
+	<param name="sprk_globalTime" type="float" default="0." />
+	<param name="sprk_scale" type="float" default="1." />
+
+	<param name="tex0" type="int" default="0" />
+	<param name="tex1" type="int" default="1" />
+
+    <!-- COMMENT: add here your own parameters...
+
+    copy and modify the following lines outsite of this comment section:
+
+	<param name="myVeryOwnFloat" type="float" default="1." description="Use_underscore_for_spaces_to_seperate_'words'"/>
+	<param name="myVeryOwnVec3" type="vec3" default="0. 0. 0." description="text with spaces will only show up as 'text'"/>
+
+    you can use parameters of the following types:
+
+        TYPES       GUI     QUE
+
+        -float      y       y
+        -vec2       y       y
+        -vec3       y       y
+        -vec4       y       y
+        -mat3       -       y
+        -mat4       -       y
+
+        DON'T USE int: it is reserved for textures!!
+
+    GUI: The RayMarching Node will scan the parameters and tries to make them accessible through the userinterface
+    QUE: These parameters can be sent to this shader via OSC or QueScript.
+
+    ...Dont forget to bind it the shader: END OF COMMENT-->
+
+	<language name="glsl" version="1.2">
+		<bind param="sprk_worldMatrix" program="vp" />
+		<bind param="sprk_rotMatrix" program="fp" />
+		<bind param="sprk_scale" program="fp" />
+		<bind param="sprk_viewPos" program="fp" />
+		<bind param="sprk_worldRefPos" program="fp" />
+		<bind param="sprk_globalTime" program="fp" />
+
+		<bind param="tex0" program="fp" />
+		<bind param="tex1" program="fp" />
+
+        <!-- COMMENT: bind your own parameters here to the vertex shader (vp) and/or fragment shader (fp)
+
+        copy and modify the following lines outsite of this comment section:
+
+        <bind param="myVeryOwnFloat" program="fp" />
+        <bind param="myVeryOwnVec3" program="fp" />
+
+        ...until here.-->
+
+		<program name="vp" type="vertex">
+<![CDATA[
+
+// >>>>> ================================
+// >>>>> DO NOT CHANGE ANYTHING FROM HERE
+// >>>>> ================================
+
+#version 120
+
+uniform mat4 sprk_worldMatrix;
+uniform mat4 sprk_rotMatrix;
+
+varying vec3 sprk_normal;	// surface normal
+varying vec3 sprk_localPos;	// vertex local position
+varying vec3 sprk_worldPos;	// vertex world position
+
+varying vec2 sprk_texcoord0;
+varying vec2 sprk_texcoord1;
+varying vec2 sprk_texdim0;
+varying vec2 sprk_texdim1;
+
+void main(void)
+{
+	// perform standard transform on vertex (general approach)
+	gl_Position = ftransform();
+
+	gl_TexCoord[0]  = gl_TextureMatrix[0] * gl_MultiTexCoord0;
+
+	sprk_normal = normalize(mat3(sprk_worldMatrix) * gl_Normal);
+	sprk_localPos = vec3(sprk_rotMatrix * gl_Vertex);
+	sprk_worldPos = vec3(sprk_worldMatrix * gl_Vertex);
+
+	// transform texcoords
+    sprk_texcoord0 = vec2(gl_TextureMatrix[0] * gl_MultiTexCoord0);
+    sprk_texcoord1 = vec2(gl_TextureMatrix[1] * gl_MultiTexCoord1);
+    // extract the x and y scalars from the texture matrix to determine dimensions
+    sprk_texdim0 = vec2 (abs(gl_TextureMatrix[0][0][0]),abs(gl_TextureMatrix[0][1][1]));
+    sprk_texdim1 = vec2 (abs(gl_TextureMatrix[1][0][0]),abs(gl_TextureMatrix[1][1][1]));
+}
+
+]]>
+		</program>
+		<program name="fp" type="fragment">
+<![CDATA[
+
+uniform vec3 sprk_viewPos; 			// point of view position
+uniform vec3 sprk_worldRefPos;      // reference position of this virtual world
+uniform mat4 sprk_rotMatrix; 		// rotation matrix
+uniform float sprk_scale;			// viewline scale
+uniform float sprk_globalTime; 		// time
+
+varying vec3 sprk_normal;			// surface normal
+varying vec3 sprk_worldPos;			// vertex world position
+varying vec3 sprk_localPos;			// vertex local position
+
+// samplers
+uniform sampler2DRect tex0;			// texture reference for texture 0
+uniform sampler2DRect tex1;			// texture reference for texture 1
+
+// texcoords
+varying vec2 sprk_texcoord0;		// texture coordinate for texture 0
+varying vec2 sprk_texdim0;			// texture dimension for texture 0
+varying vec2 sprk_texcoord1;		// texture coordinate for texture 1
+varying vec2 sprk_texdim1;			// texture dimension for texture 0
+
+// ================================= <<<<<<
+// ...................... UNTIL HERE <<<<<<
+// ================================= <<<<<<
+
+// From here onwards will be your custom code...
+
+// *************************************************************************
+//
+// Created by:  PixelPhil
+//		https://www.shadertoy.com/view/ts33DX
+//
+// *************************************************************************
+
+// Add here your own parameters
+
+uniform float myVeryOwnFloat;
+uniform vec3 myVeryOwnVec3;
+
+// If your old shader code came from shadertoy.com and used mouse interaction,
+// these values will usually lead to good results
+// since we dont need them anymore they can be static.
+
+vec2 iMouse = vec2(0.5, 0.5);
+vec2 iResolution = vec2(1, 1);
+float iGlobalTime = sprk_globalTime;
+float iTime = sprk_globalTime;
+
+// >>>>>>>>>>>>>>>>>>>>>>
+
+//
+// Sakura Bliss by Philippe Desgranges
+// Email: Philippe.desgranges@gmail.com
+// License Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+//
+
+//
+// I recently stumbled upon Martijn Steinrucken aka BigWings Youtube channel
+// his work amazed me and inspired me to take a leap and try it out for myself.
+//
+// This is my first ShaderToy entry.
+//
+
+#define S(a,b,c) smoothstep(a,b,c)
+#define sat(a) clamp(a,0.0,1.0)
+
+
+// Borrowed from BigWIngs
+vec4 N14(float t) {
+	return fract(sin(t*vec4(123., 104., 145., 24.))*vec4(657., 345., 879., 154.));
+}
+
+
+// Computes the RGB and alpha of a single flower in its own UV space
+vec4 sakura(vec2 uv, vec2 id, float blur)
+{
+    float time = iTime + 45.0; //time is offset to avoid the flowers to be aligned at start
+
+    vec4 rnd = N14(id.x * 5.4 + id.y * 13.67); //get 4 random numbersper flower
+
+    // Offset the flower form the center in a random Lissajous pattern
+    uv *= mix(0.75, 1.3, rnd.y);
+    uv.x += sin(time * rnd.z * 0.3) * 0.6;
+    uv.y += sin(time * rnd.w * 0.45) * 0.4;
+
+
+    // Computes the angle of the flower with a random rotation speed
+    float angle = atan(uv.y, uv.x) + rnd.x * 421.47 + iTime * mix(-0.6, 0.6, rnd.x);
+
+
+    // euclidean distance to the center of the flower
+    float dist = length(uv);
+
+  	// Flower shaped distance function form the center
+    float petal = 1.0 - abs(sin(angle * 2.5));
+    float sqPetal = petal * petal;
+    petal = mix(petal, sqPetal, 0.7);
+    float petal2 = 1.0 - abs(sin(angle * 2.5 + 1.5));
+    petal += petal2 * 0.2;
+
+    float sakuraDist = dist + petal * 0.25;
+
+
+    // Compute a blurry shadow mask.
+    float shadowblur = 0.3;
+    float shadow = S(0.5 + shadowblur, 0.5 - shadowblur, sakuraDist) * 0.4;
+
+    //Computes the sharper mask of the flower
+    float sakuraMask = S(0.5 + blur, 0.5 - blur, sakuraDist);
+
+    // The flower has a pink hue and is lighter in the center
+    vec3 sakuraCol = vec3(1.0, 0.6, 0.7);
+    sakuraCol += (0.5 -  dist) * 0.2;
+
+	// Computes the border mask of the flower
+    vec3 outlineCol = vec3(1.0, 0.3, 0.3);
+    float outlineMask = S(0.5 - blur, 0.5, sakuraDist + 0.045);
+
+    // Defines a tiling polarspace for the pistil pattern
+    float polarSpace = angle * 1.9098 + 0.5;
+    float polarPistil = fract(polarSpace) - 0.5; // 12 / (2 * pi)
+
+    // Round dot in the center
+    outlineMask += S(0.035 + blur, 0.035 - blur, dist);
+
+    float petalBlur = blur * 2.0;
+    float pistilMask = S(0.12 + blur, 0.12, dist) * S(0.05, 0.05 + blur , dist);
+
+    // Compute the pistil 'bars' in polar space
+    float barW = 0.2 - dist * 0.7;
+    float pistilBar = S(-barW, -barW + petalBlur, polarPistil) * S(barW + petalBlur, barW, polarPistil);
+
+    // Compute the little dots in polar space
+    float pistilDotLen = length(vec2(polarPistil * 0.10, dist) - vec2(0, 0.16)) * 9.0;
+    float pistilDot = S(0.1 + petalBlur, 0.1 - petalBlur, pistilDotLen);
+
+    //combines the middle an border color
+    outlineMask += pistilMask * pistilBar + pistilDot;
+    sakuraCol = mix(sakuraCol, outlineCol, sat(outlineMask) * 0.5);
+
+    //sets the background to the shadow color
+    sakuraCol = mix(vec3(0.2, 0.2, 0.8) * shadow, sakuraCol, sakuraMask);
+
+    //incorporates the shadow mask into alpha channel
+    sakuraMask = sat(sakuraMask + shadow);
+
+	//returns the flower in pre-multiplied rgba
+    return vec4(sakuraCol, sakuraMask);
+}
+
+// blends a pre-multiplied src onto a dst color (without alpha)
+vec3 premulMix(vec4 src, vec3 dst)
+{
+    return dst.rgb * (1.0 - src.a) + src.rgb;
+}
+
+// blends a pre-multiplied src onto a dst color (with alpha)
+vec4 premulMix(vec4 src, vec4 dst)
+{
+    vec4 res;
+    res.rgb = premulMix(src, dst.rgb);
+    res.a = 1.0 - (1.0 - src.a) * (1.0 - dst.a);
+    return res;
+}
+
+
+// Computes a Layer of flowers
+vec4 layer(vec2 uv, float blur)
+{
+    vec2 cellUV = fract(uv) - 0.5;
+    vec2 cellId = floor(uv);
+
+    vec4 accum = vec4(0.0);
+
+    // the flowers can overlap on the 9 neighboring cells so we blend them all together on each cell
+    for (float y = -1.0; y <= 1.0; y++)
+    {
+        for (float x = -1.0; x <= 1.0; x++)
+        {
+            vec2 offset = vec2(x, y);
+            vec4 sakura = sakura(cellUV - offset, cellId + offset, blur);
+            accum = premulMix(sakura, accum);
+        }
+    }
+
+ 	return accum;
+}
+
+
+// <<<<<<<<<<<<<<<<<<<<<<
+
+
+// the main function needs to look like this:
+
+void main() {
+    // It should start with the following code block
+
+    // =================  DO NOT CHANGE THIS CODE  =============================
+	vec4 sprk_vl_raw = vec4(sprk_worldPos - sprk_viewPos - sprk_worldRefPos, 1);
+	vec3 sprk_vl_dir = (sprk_rotMatrix * sprk_vl_raw).xyz;
+	vec3 sprk_ray    = normalize(sprk_vl_dir) * sprk_scale;
+    // =================  DO NOT CHANGE THIS CODE  =============================
+
+    // usefull variables that are controlled by the RayMarching Node are:
+
+    //  sprk_ray        (vec3) -> it is THE RAY
+    //  sprk_viewPos;   (vec3) -> the world postion of your eye
+    //  sprk_localPos   (vec3) -> the place where the ray hits the canvas. (local coordinate system)
+    //  sprk_worldPos   (vec3) -> the place where the ray hits the canvas. (global coordinate system)
+    //  sprk_rotMatrix  (mat4) -> rotates the ray around itself
+    //  sprk_scale      (float)-> scales the ray
+    //  sprk_globalTime (float)-> the global time in seconds
+
+	// example code for gathering texture color:
+
+    //vec3 sprk_texColor0   = texture2DRect(tex0, sprk_texcoord0).rgb;
+    //vec3 sprk_texColor1   = texture2DRect(tex1, sprk_texcoord1).rgb;
+
+    // >>>>>>>>>>>>>>>>>>>>>>
+
+		vec2 fragCoord = sprk_texcoord0.xy * 2.;
+
+		// Normalized pixel coordinates (from 0 to 1)
+    vec2 nominalUV = vec2((fragCoord.x - 0.5) / 0.5, fragCoord.y - .5);;
+
+    vec2 uv = nominalUV - 0.0;
+    uv.x *= iResolution.x / iResolution.y;
+
+    // Scroll the UV with a cosine oscillation
+    uv.y += iTime * 0.1;
+    uv.x -= iTime * 0.03 + sin(iTime) * 0.1;
+
+    uv *= 4.3;
+
+    //Compute a BG gradient
+    float screenY = nominalUV.y;
+    vec3 col = mix(vec3(0.3, 0.3, 1.0), vec3(1.0, 1.0, 1.0), screenY);
+
+    // Compute a tilt-shift-like blur factor
+    float blur = abs(nominalUV.y - 0.5) * 2.0;
+    blur *= blur * 0.15;
+
+    // Computes several layers with various degrees of blur and scale
+    vec4 layer1 = layer(uv, 0.015 + blur);
+    vec4 layer2 = layer(uv * 1.5 + vec2(124.5, 89.30), 0.05 + blur);
+    layer2.rgb *= mix(0.7, 0.95, screenY);
+    vec4 layer3 = layer(uv * 2.3 + vec2(463.5, -987.30), 0.08 + blur);
+    layer3.rgb *= mix(0.55, 0.85, screenY);
+
+    // Blend it all together
+	col = premulMix(layer3, col);
+    col = premulMix(layer2, col);
+	col = premulMix(layer1, col);
+
+    // Adds some light at the to of the screen
+    col += vec3(nominalUV.y * nominalUV.y) * 0.2;
+
+
+    // Output to screen
+    gl_FragColor = vec4(col,1.0);
+    // <<<<<<<<<<<<<<<<<<<<<<
+
+}
+
+
+]]>
+		</program>
+	</language>
+</jittershader>

@@ -1,0 +1,381 @@
+<jittershader name="ray.template.jxs">
+	<description>SPARCK - ShaderTemplate - (c) 2017 by maybites</description>
+
+	<param name="sprk_screenMatrix" type="mat4" state="WORLD_MATRIX" />
+	<param name="sprk_rotMatrix" type="mat4" default="0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0." />
+	<param name="sprk_viewPos" type="vec3" default="0. 0. 0." description="test"/>
+	<param name="sprk_worldRefPos" type="vec3" default="0. 0. 0." description="test"/>
+	<param name="sprk_globalTime" type="float" default="0." />
+	<param name="sprk_scale" type="float" default="1." />
+
+	<param name="tex0" type="int" default="0" />
+	<param name="tex1" type="int" default="1" />
+
+	<!-- COMMENT: add here your own parameters...
+
+	copy and modify the following lines outside of this comment section:
+
+	<param name="myVeryOwnFloat" type="float" default="1." description="@desc=this_text_will_be_shown_inside_the_hint"/>
+	<param name="myVeryOwnVec3" type="vec3" default="0. 2. 0." description="@desc=don't_.use_spaces!|@min=0.0|@max=1.0|@gui=0"/>
+
+	copy and modify the following lines outside of this comment section:
+
+	you can use parameters of the following types:
+
+			TYPES       GUI     QUE
+
+			-int        y       y
+			-float      y       y
+			-vec2       y       y
+			-vec3       y       y
+			-vec4       y       y
+			-mat3       -       y
+			-mat4       -       y
+
+	GUI: The RayMarching Node will scan the parameters and tries to make them accessible through the GUI
+	QUE: These parameters can be sent to this shader via OSC or QueScript.
+
+Inside description is is possible to pass on additional parameters. The character SPACE (' ') and COMMA (',') are not
+permitted and will break the parsing. Use UNDERSCORE ('_') to separate words. Use ('|') to separate parameter pairs.
+
+	param name="myFloat" type="float" default="0.5" description="@desc=a_simple_float|@min=0.0|@max=1.0"
+
+	@desc=descriptive_text 		you can use the following special characters: !?.:>+-[]()
+	@desc0=descriptive_text		for value0
+	@min=0.0									minimum float value for the GUI
+	@max=1.0									maximum float value for the GUI
+	@gui=0/1									show inside the GUI (default = 1)
+
+	...Don't forget to bind it to the shader: END OF COMMENT-->
+
+	<language name="glsl" version="1.2">
+		<bind param="sprk_screenMatrix" program="vp" />
+		<bind param="sprk_rotMatrix" program="fp" />
+		<bind param="sprk_scale" program="fp" />
+		<bind param="sprk_viewPos" program="fp" />
+		<bind param="sprk_worldRefPos" program="fp" />
+		<bind param="sprk_globalTime" program="fp" />
+
+		<bind param="tex0" program="fp" />
+		<bind param="tex1" program="fp" />
+
+        <!-- COMMENT: bind your own parameters here to the vertex shader (vp) and/or fragment shader (fp)
+
+        copy and modify the following lines outsite of this comment section:
+
+        <bind param="myVeryOwnFloat" program="fp" />
+        <bind param="myVeryOwnVec3" program="fp" />
+
+        ...until here.-->
+
+		<program name="vp" type="vertex">
+<![CDATA[
+
+// >>>>> ================================
+// >>>>> DO NOT CHANGE ANYTHING FROM HERE
+// >>>>> ================================
+
+#version 120
+
+uniform mat4 sprk_screenMatrix;
+uniform mat4 sprk_rotMatrix;
+
+varying vec3 sprk_normal;	// surface normal
+varying vec3 sprk_worldPos;	// vertex world position
+varying vec3 sprk_localPos;	// vertex local position
+
+varying vec2 sprk_texcoord0;		// texture coordinate for texture 0
+varying vec2 sprk_texdim0;			// texture dimension for texture 0
+varying vec2 sprk_texcoord1;		// texture coordinate for texture 1
+varying vec2 sprk_texdim1;			// texture dimension for texture 0
+
+void main(void)
+{
+	// perform standard transform on vertex (general approach)
+	gl_Position = ftransform();
+
+	gl_TexCoord[0]  = gl_TextureMatrix[0] * gl_MultiTexCoord0;
+
+	sprk_normal = normalize(mat3(sprk_screenMatrix) * gl_Normal);
+	sprk_worldPos = vec3(sprk_screenMatrix * gl_Vertex);
+	sprk_localPos = vec3(sprk_rotMatrix * gl_Vertex);
+
+	// transform texcoords
+  sprk_texcoord0 = vec2(gl_TextureMatrix[0] * gl_MultiTexCoord0);
+  sprk_texcoord1 = vec2(gl_TextureMatrix[1] * gl_MultiTexCoord1);
+  // extract the x and y scalars from the texture matrix to determine dimensions
+  sprk_texdim0 = vec2 (abs(gl_TextureMatrix[0][0][0]),abs(gl_TextureMatrix[0][1][1]));
+  sprk_texdim1 = vec2 (abs(gl_TextureMatrix[1][0][0]),abs(gl_TextureMatrix[1][1][1]));
+}
+
+]]>
+		</program>
+		<program name="fp" type="fragment">
+<![CDATA[
+
+uniform vec3 sprk_viewPos; 			// point of view position
+uniform vec3 sprk_worldRefPos;      // reference position of this virtual world
+uniform mat4 sprk_rotMatrix; 		// rotation matrix
+uniform float sprk_scale;			// viewline scale
+uniform float sprk_globalTime; 		// time
+
+varying vec3 sprk_normal;			// surface normal
+varying vec3 sprk_worldPos;			// vertex world position
+varying vec3 sprk_localPos;			// vertex world position
+
+// samplers
+uniform sampler2DRect tex0;			// texture reference for texture 0
+uniform sampler2DRect tex1;			// texture reference for texture 1
+
+// texcoords
+varying vec2 sprk_texcoord0;		// texture coordinate for texture 0
+varying vec2 sprk_texdim0;			// texture dimension for texture 0
+varying vec2 sprk_texcoord1;		// texture coordinate for texture 1
+varying vec2 sprk_texdim1;			// texture dimension for texture 0
+
+// ================================= <<<<<<
+// ...................... UNTIL HERE <<<<<<
+// ================================= <<<<<<
+
+// From here onwards will be your custom code...
+
+// *************************************************************************
+//
+// Created by:
+//
+//
+// *************************************************************************
+
+// Add here your own parameters
+
+uniform float myVeryOwnFloat;
+uniform vec3 myVeryOwnVec3;
+
+// If your old shader code came from shadertoy.com and used mouse interaction,
+// these values will usually lead to good results
+// since we dont need them anymore they can be static.
+
+vec2 iMouse = vec2(0.5, 0.5);
+vec2 iResolution = vec2(1, 1);
+float iGlobalTime = sprk_globalTime;
+
+// >>>>>>>>>>>>>>>>>>>>>>
+
+
+// YOUR CODE HERE
+
+//
+// Seigaiha Mandala by Philippe Desgranges
+// Email: Philippe.desgranges@gmail.com
+// License Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+//
+
+#define S(a,b,c) smoothstep(a,b,c)
+
+
+// blends a pre-multiplied src onto a dst color (without alpha)
+vec3 premulMix(vec4 src, vec3 dst)
+{
+    return dst.rgb * (1.0 - src.a) + src.rgb;
+}
+
+// blends a pre-multiplied src onto a dst color (with alpha)
+vec4 premulMix(vec4 src, vec4 dst)
+{
+    vec4 res;
+    res.rgb = premulMix(src, dst.rgb);
+    res.a = 1.0 - (1.0 - src.a) * (1.0 - dst.a);
+    return res;
+}
+
+// compute the round scale pattern and its mask
+// output rgb is premultiplied by alpha
+vec4 roundPattern(vec2 uv)
+{
+    float dist = length(uv);
+
+    // Resolution dependant Anti-Aliasing for a prettier thumbnail
+    // Thanks Fabrice Neyret & dracusa for pointing this out.
+    float aa = 0.01 / iResolution.x;
+
+    // concentric circles are made by thresholding a triangle wave function
+    float triangle = abs(fract(dist * 11.0 + 0.3) - 0.5);
+    float circles = S(0.2 - aa * 10.0, 0.25 + aa * 10.0, triangle);
+
+    // a light gradient is applied to the rings
+    float grad = dist * 8.0;
+    vec3 col = mix(vec3(0.0, 0.5, 0.6),  vec3(0.0, 0.2, 0.5), grad * grad);
+    col = mix(col, vec3(1.0), circles);
+
+    // border and center are red
+    vec3 borderColor = vec3(1, 0.2, 0.2);
+    col = mix(col, borderColor, S(0.44 - aa, 0.44 + aa, dist));
+    col = mix(col, borderColor, S(0.05 + aa, 0.05 - aa, dist));
+
+    // computes the mask with a soft shadow
+    float mask = S(0.5, 0.49, dist);
+    float blur = 0.3;
+    float shadow = S(0.5 + blur, 0.5 - blur, dist);
+
+    return vec4(col * mask, clamp(mask + shadow * 0.55, 0.0, 1.0));
+}
+
+
+//computes the scales on a ring of a given radius with a given number of scales
+vec4 ring(vec2 uv, float angle, float angleOffet, float centerDist, float numcircles, float circlesRad)
+{
+    // polar space is cut in quadrants (one per scale)
+    float quadId = floor(angle * numcircles + angleOffet);
+
+    // computes the angle of the center of the quadrant
+    float quadAngle = (quadId + 0.5 - angleOffet) * (6.283 / numcircles);
+
+    // computes the center point of the quadrant on the circle
+    vec2 quadCenter = vec2(cos(quadAngle), sin(quadAngle)) * centerDist;
+
+    // return to color of the scale in the quadrant
+    vec2 circleUv = (uv + quadCenter) / circlesRad;
+    return roundPattern(circleUv);
+}
+
+// computes a ring with two layers of overlapping patterns
+vec4 dblRing(vec2 uv, float angle, float centerDist, float numcircles, float circlesRad, float t)
+{
+    // Odd and even scales dance up and down
+    float s = sin(t * 2.0 + centerDist * 10.0) * 0.05;
+    float d1 = 1.05 + s;
+    float d2 = 1.05 - s;
+
+    // the whole thing spins with a sine perturbation
+    float rot = t * centerDist * 0.4 + sin(t + centerDist * 5.0) * 0.2;
+
+    // compute bith rings
+    vec4 ring1 = ring(uv, angle, 0.0 + rot, centerDist * d1, numcircles, circlesRad);
+    vec4 ring2 = ring(uv, angle, 0.5 + rot, centerDist * d2, numcircles, circlesRad);
+
+    // blend the results
+    vec4 col = premulMix(ring1, ring2);
+
+    // add a bit of distance shading for extra depth
+    col.rgb *= 1.0 - (centerDist * centerDist) * 0.4;
+
+    return col;
+}
+
+// computes a double ring on a given radius with a number of scales to fill the circle evenly
+vec4 autoRing(vec2 uv, float angle, float centerDist, float t)
+{
+    float nbCircles = 1.0 + floor(centerDist * 43.0);
+    return dblRing(uv, angle, centerDist, nbCircles, 0.11, t);
+}
+
+// Computes the pixel color for the full image at a givent time
+vec3 fullImage(vec2 uv, float angle, float centerDist, float t)
+{
+    vec3 col;
+
+    // the screen is cut in concentric rings
+    float space = 0.05;
+
+    // determine in which ring the pixel is
+    float ringRad = floor(centerDist / space) * space;
+
+	// computes the scales in the previous, current and next ring
+	vec4 ringCol1 = autoRing(uv, angle, ringRad - space, t);
+ 	vec4 ringCol2 = autoRing(uv, angle, ringRad, t);
+    vec4 ringCol3 = autoRing(uv, angle, ringRad + space, t);
+
+    // blends everything together except in the center
+    if (ringRad > 0.0)
+    {
+        col.rgb = ringCol3.rgb;
+        col.rgb = premulMix(ringCol2, col.rgb);
+        col.rgb = premulMix(ringCol1, col.rgb);
+    }
+	else
+    {
+        col.rgb = ringCol2.rgb;
+    }
+
+    return col;
+}
+
+// A noise function that I tried to make as gaussian-looking as possible
+float noise21(vec2 uv)
+{
+    vec2 n = fract(uv* vec2(190.48, 139.9));
+    n += sin(dot(uv, uv + 60.7)) * 47.0;
+    return fract(n.x * n.y);
+}
+
+
+
+// <<<<<<<<<<<<<<<<<<<<<<
+
+
+// the main function needs to look like this:
+
+void main() {
+    // It should start with the following code block
+
+    // =================  DO NOT CHANGE THIS CODE  =============================
+	vec4 sprk_vl_raw = vec4(sprk_worldPos - sprk_viewPos - sprk_worldRefPos, 1);
+	vec3 sprk_vl_dir = (sprk_rotMatrix * sprk_vl_raw).xyz;
+	vec3 sprk_ray    = normalize(sprk_vl_dir) * sprk_scale;
+    // =================  DO NOT CHANGE THIS CODE  =============================
+
+    // usefull variables that are controlled by the RayMarching Node are:
+
+    //  sprk_ray        (vec3) -> it is THE RAY
+    //  sprk_viewPos;   (vec3) -> the world postion of your eye
+    //  sprk_worldPos   (vec3) -> the place where the ray hits the canvas.
+    //  sprk_rotMatrix  (mat4) -> rotates the ray around itself
+    //  sprk_scale      (float)-> scales the ray
+    //  sprk_globalTime (float)-> the global time in seconds
+
+		// example code for gathering texture color:
+
+	  //vec3 sprk_texColor0   = texture2DRect(tex0, sprk_texcoord0).rgb;
+	  //vec3 sprk_texColor1   = texture2DRect(tex1, sprk_texcoord1).rgb;
+
+    // >>>>>>>>>>>>>>>>>>>>>>
+
+	vec2 fragCoord = sprk_texcoord0.xy * 0.5;
+	float iTime = sprk_globalTime * 0.5;
+
+    // YOUR CODE HERE
+
+	// Normalized pixel coordinates (from 0 to 1)
+    vec2 uv = vec2((fragCoord.x - 0.5) / 0.5, fragCoord.y - .5);// / iResolution.y;
+
+    uv *= 0.9;
+
+    // Computes polar cordinates
+    float angle = atan(uv.y, uv.x) / 6.283 + 0.5;
+    float centerDist = length(uv);
+
+    vec3 col = vec3(0.7);
+
+	// average 4 samples at slightly different times for motion blur
+    float noise = noise21(uv + iTime);
+    for (float i = 0.0; i < 3.0; i++)
+    {
+        col += fullImage(uv, angle, centerDist, iTime - ((i + noise) * 0.03));
+    }
+    col /= 4.0;
+
+    // Output to screen
+    gl_FragColor = vec4(col,1.0);
+
+
+    // <<<<<<<<<<<<<<<<<<<<<<
+
+    // setting the fragments color:
+	// gl_FragColor = vec4(sprk_ray, fract(sprk_globalTime));
+}
+
+
+]]>
+		</program>
+	</language>
+</jittershader>

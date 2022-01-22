@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<pattrstorage name = "settings">
+	<slot number = "1">
+		<patcher name = "Application_sparck">
+			<pattr name = "editor" value = "0" />
+			<pattr name = "mainMetro" value = "&quot;30 hz&quot;" />
+			<pattr name = "mainSwitch" value = "1" />
+			<patcher name = "_properties">
+				<pattr name = "preferences" value = "1" />
+			</patcher>
+			<patcher name = "Editor">
+				<patcher name = "patcher">
+					<pattr name = "position" value = "rect 5 410 545 695" />
+				</patcher>
+			</patcher>
+			<patcher name = "3DViewer">
+				<pattr name = "_enable" value = "1" />
+				<patcher name = "_orbiter">
+					<pattr name = "orbitOnePosition" value = "position -0.462683 1.507592 0.673736" />
+					<pattr name = "orbitOneQuat" value = "quat 0. 0. -0.54463 0.838657" />
+					<pattr name = "orbitThreePosition" value = "position 0. 0. 11.1" />
+					<pattr name = "orbitTwoQuat" value = "quat 0.507531 0. 0. 0.861618" />
+				</patcher>
+				<patcher name = "_setgroupstage">
+					<pattr name = "matrix" value = "0 0 0" />
+					<pattr name = "stagebutton" value = "1" />
+				</patcher>
+				<patcher name = "_storePosition">
+					<patcher name = "patcher">
+						<pattr name = "position" value = "rect 5 48 545 380" />
+					</patcher>
+				</patcher>
+			</patcher>
+		</patcher>
+		<patcher name = "workspace">
+			<patcher name = "Output">
+				<patcher name = "_orbiter">
+					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
+					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0. 1." />
+					<pattr name = "orbitThreePosition" value = "position 0. 0. 3." />
+					<pattr name = "orbitTwoQuat" value = "quat 0. 0. 0. 1." />
+				</patcher>
+			</patcher>
+		</patcher>
+	</slot>
+</pattrstorage>
+

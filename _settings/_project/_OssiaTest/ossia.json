@@ -1,0 +1,11 @@
+{
+	"current" : 	{
+		"node/ShdrBlur/base" : 1.0,
+		"node/ShdrBlur/blur" : 1.0,
+		"node/ShdrBlur/enable" : 1.0,
+		"node/ShdrBlur/iterations" : 1,
+		"node/ShdrBlur/internal/body" : "expand",
+		"node/ShdrBlur/internal/nodeid" : "1776_id"
+	}
+
+}

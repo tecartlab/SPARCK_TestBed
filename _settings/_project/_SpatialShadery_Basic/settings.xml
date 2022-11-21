@@ -4,7 +4,7 @@
 	<slot number = "1">
 		<patcher name = "Application_sparck">
 			<pattr name = "editor" value = "0" />
-			<pattr name = "mainMetro" value = "&quot;120 hz&quot;" />
+			<pattr name = "mainMetro" value = "&quot;20 hz&quot;" />
 			<pattr name = "mainSwitch" value = "1" />
 			<patcher name = "_properties">
 				<pattr name = "preferences" value = "1" />
@@ -15,20 +15,20 @@
 				</patcher>
 			</patcher>
 			<patcher name = "3DViewer">
-				<pattr name = "_enable" value = "0" />
+				<pattr name = "_enable" value = "1" />
 				<patcher name = "_orbiter">
+					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0.999344 0.034896" />
 					<pattr name = "orbitOnePosition" value = "position -0.397624 -0.81615 1.706525" />
-					<pattr name = "orbitOneQuat" value = "quat 0. 0. -0.061044 0.998089" />
+					<pattr name = "orbitTwoQuat" value = "quat -0.453972 0. 0. -0.890968" />
 					<pattr name = "orbitThreePosition" value = "position 0. 0. 6.95" />
-					<pattr name = "orbitTwoQuat" value = "quat -0.522478 0. 0. -0.852605" />
 				</patcher>
 				<patcher name = "_setgroupstage">
-					<pattr name = "matrix" value = "0 1 1" />
+					<pattr name = "matrix" value = "0 1 1." />
 					<pattr name = "stagebutton" value = "1" />
 				</patcher>
 				<patcher name = "_storePosition">
 					<patcher name = "patcher">
-						<pattr name = "position" value = "rect 869 77 1409 409" />
+						<pattr name = "position" value = "rect 828 66 1368 297" />
 					</patcher>
 				</patcher>
 			</patcher>
@@ -58,10 +58,10 @@
 			</patcher>
 			<patcher name = "Output">
 				<patcher name = "_orbiter">
-					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
 					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0. 1." />
-					<pattr name = "orbitThreePosition" value = "position 0. 0. 3." />
+					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
 					<pattr name = "orbitTwoQuat" value = "quat 0. 0. 0. 1." />
+					<pattr name = "orbitThreePosition" value = "position 0. 0. 3." />
 				</patcher>
 			</patcher>
 		</patcher>

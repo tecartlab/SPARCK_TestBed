@@ -23,7 +23,11 @@
 		"node/BoxMapCamera/cam/top/enable" : 0.0,
 		"node/BoxMapCamera/gizmo/renderGroup" : [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
 		"node/BoxMapCamera/internal/body" : "expand",
+<<<<<<< HEAD
 		"node/BoxMapCamera/internal/nodeid" : "2915_id",
+=======
+		"node/BoxMapCamera/internal/nodeid" : "1542_id",
+>>>>>>> temp
 		"node/BoxMapCamera/lens/culling/far" : 10.0,
 		"node/BoxMapCamera/lens/culling/near" : 0.05,
 		"node/Camera/enable" : 1.0,
@@ -33,17 +37,29 @@
 		"node/Camera/tfm/local/posZ" : 1.0,
 		"node/Camera/tfm/local/rotX" : 100.0,
 		"node/Camera/tfm/local/rotY" : 0.0,
+<<<<<<< HEAD
 		"node/Camera/tfm/local/rotZ" : -20.0,
+=======
+		"node/Camera/tfm/local/rotZ" : 0.0,
+>>>>>>> temp
 		"node/Camera/tfm/local/scaleX" : 1.0,
 		"node/Camera/tfm/local/scaleY" : 1.0,
 		"node/Camera/tfm/local/scaleZ" : 1.0,
 		"node/Camera/tfm/local/pos" : [ 0.0, 0.0, 1.0 ],
+<<<<<<< HEAD
 		"node/Camera/tfm/local/rot" : [ 100.0, 0.0, -20.0 ],
+=======
+		"node/Camera/tfm/local/rot" : [ 100.0, 0.0, 0.0 ],
+>>>>>>> temp
 		"node/Camera/tfm/local/scale" : [ 1.0, 1.0, 1.0 ],
 		"node/Camera/tfm/parent" : "<none>",
 		"node/Camera/gizmo/renderGroup" : [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
 		"node/Camera/internal/body" : "expand",
+<<<<<<< HEAD
 		"node/Camera/internal/nodeid" : "2901_id",
+=======
+		"node/Camera/internal/nodeid" : "1528_id",
+>>>>>>> temp
 		"node/Camera/lens/optics" : "fov_perspective",
 		"node/Camera/lens/adapt/enable" : 0.0,
 		"node/Camera/lens/adapt/factor" : 1.0,
@@ -68,8 +84,13 @@
 		"node/Canvas/render/shader" : "TextureProjectory",
 		"node/Canvas/render/showaxis" : 0.0,
 		"node/Canvas/render/bake/border" : 0,
+<<<<<<< HEAD
 		"node/Canvas/render/bake/dim/size" : [ 3840.0, 1080.0 ],
 		"node/Canvas/render/bake/dim/square" : "custom",
+=======
+		"node/Canvas/render/bake/dim/size" : [ 1920.0, 1080.0 ],
+		"node/Canvas/render/bake/dim/square" : 1024,
+>>>>>>> temp
 		"node/Canvas/render/internal/bake/enable" : 1.0,
 		"node/Canvas/tfm/local/matrix" : [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ],
 		"node/Canvas/tfm/local/posX" : 0.0,
@@ -92,7 +113,11 @@
 		"node/Canvas/depth/enable" : 1.0,
 		"node/Canvas/depth/layer" : 0,
 		"node/Canvas/internal/body" : "expand",
+<<<<<<< HEAD
 		"node/Canvas/internal/nodeid" : "2973_id",
+=======
+		"node/Canvas/internal/nodeid" : "1600_id",
+>>>>>>> temp
 		"node/Canvas/lighting/enable" : 0.0,
 		"node/Canvas/mesh/filewatch" : 0.0,
 		"node/Canvas/mesh/file" : "10mCylinder.obj",
@@ -126,7 +151,11 @@
 		"node/Grid/depth/enable" : 1.0,
 		"node/Grid/depth/layer" : 10,
 		"node/Grid/internal/body" : "collapse",
+<<<<<<< HEAD
 		"node/Grid/internal/nodeid" : "2996_id",
+=======
+		"node/Grid/internal/nodeid" : "1623_id",
+>>>>>>> temp
 		"node/Grid/render/renderGroup" : [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
 		"node/Grid/render/showaxis" : 0.0,
 		"node/Output/antialias" : 0.0,
@@ -137,7 +166,11 @@
 		"node/Output/desktop/floating" : 0.0,
 		"node/Output/internal/body" : "collapse",
 		"node/Output/internal/escape" : 1.0,
+<<<<<<< HEAD
 		"node/Output/internal/nodeid" : "2892_id",
+=======
+		"node/Output/internal/nodeid" : "1519_id",
+>>>>>>> temp
 		"node/Output/position/desktop" : [ 0, 411, 548, 635 ],
 		"node/Output/position/output" : [ 100, 100, 420, 340 ],
 		"node/Output/position/mode" : 0.0,
@@ -163,9 +196,13 @@
 		"node/TextureProjectory/blend/angle/limit" : 0.0,
 		"node/TextureProjectory/blend/bevel/curve" : -0.14,
 		"node/TextureProjectory/blend/bevel/rounded" : 1.0,
-		"node/TextureProjectory/blend/bevel/size" : 0.69,
+		"node/TextureProjectory/blend/bevel/size" : 0.78,
 		"node/TextureProjectory/internal/body" : "expand",
+<<<<<<< HEAD
 		"node/TextureProjectory/internal/nodeid" : "2924_id",
+=======
+		"node/TextureProjectory/internal/nodeid" : "1551_id",
+>>>>>>> temp
 		"node/TextureProjectory/model/isCollada" : 0.0,
 		"node/TextureProjectory/occlusion/dim" : "*",
 		"node/TextureProjectory/occlusion/enable" : 0.0,
@@ -175,16 +212,27 @@
 		"node/Video/autostart" : 1.0,
 		"node/Video/colormode" : "uyvy",
 		"node/Video/enable" : 1.0,
+<<<<<<< HEAD
 		"node/Video/frame" : 100,
 		"node/Video/frame/report" : 1.0,
 		"node/Video/interp" : 1.0,
 		"node/Video/playbar" : 490.0,
+=======
+		"node/Video/frame" : 42,
+		"node/Video/frame/report" : 1.0,
+		"node/Video/interp" : 1.0,
+		"node/Video/playbar" : 108.0,
+>>>>>>> temp
 		"node/Video/rate" : 1.0,
 		"node/Video/unique" : 1.0,
 		"node/Video/volume" : 1.0,
 		"node/Video/cache/size" : 0.1,
 		"node/Video/internal/body" : "collapse",
+<<<<<<< HEAD
 		"node/Video/internal/nodeid" : "2853_id",
+=======
+		"node/Video/internal/nodeid" : "1480_id",
+>>>>>>> temp
 		"node/Video/loop/mode" : 1,
 		"node/Video/loop/report" : 1.0,
 		"node/Video/render/pass" : "passA",
@@ -198,16 +246,27 @@
 		"node/Video_1/autostart" : 1.0,
 		"node/Video_1/colormode" : "uyvy",
 		"node/Video_1/enable" : 1.0,
+<<<<<<< HEAD
 		"node/Video_1/frame" : 100,
 		"node/Video_1/frame/report" : 1.0,
 		"node/Video_1/interp" : 1.0,
 		"node/Video_1/playbar" : 89.0,
+=======
+		"node/Video_1/frame" : 99,
+		"node/Video_1/frame/report" : 1.0,
+		"node/Video_1/interp" : 1.0,
+		"node/Video_1/playbar" : 149.0,
+>>>>>>> temp
 		"node/Video_1/rate" : 1.0,
 		"node/Video_1/unique" : 1.0,
 		"node/Video_1/volume" : 1.0,
 		"node/Video_1/cache/size" : 0.1,
 		"node/Video_1/internal/body" : "collapse",
+<<<<<<< HEAD
 		"node/Video_1/internal/nodeid" : "2837_id",
+=======
+		"node/Video_1/internal/nodeid" : "1464_id",
+>>>>>>> temp
 		"node/Video_1/loop/mode" : 1,
 		"node/Video_1/loop/report" : 1.0,
 		"node/Video_1/render/pass" : "passA",
@@ -234,7 +293,11 @@
 		"node/Viewport/tfm/local/scale" : [ 1.0, 1.0, 1.0 ],
 		"node/Viewport/tfm/reset" : 1.0,
 		"node/Viewport/internal/body" : "collapse",
+<<<<<<< HEAD
 		"node/Viewport/internal/nodeid" : "2869_id",
+=======
+		"node/Viewport/internal/nodeid" : "1496_id",
+>>>>>>> temp
 		"node/Viewport/mesh/filewatch" : 0.0,
 		"node/Viewport/mesh/file" : "select....",
 		"node/Viewport/mesh/file/path" : "notfound",

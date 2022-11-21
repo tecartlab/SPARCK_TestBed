@@ -1,0 +1,27 @@
+{
+	"_storenames" : "Main",
+	"_slotspot" : 0,
+	"bs_gui_win_bs.node.vr.hmd.1_P_Camera" : 	{
+		"_pin" : 0,
+		"_type" : "Camera",
+		"_slotsize" : 22
+	}
+,
+	"bs_gui_win_VR_HMD_P_Camera" : 	{
+		"_pin" : 0,
+		"_type" : "Camera",
+		"_slotsize" : 22
+	}
+,
+	"bs_gui_win_HeadMountedDisplay_P_Camera" : 	{
+		"_pin" : 0,
+		"_type" : "Camera",
+		"_slotsize" : 22,
+		"Main" : 		{
+			"_visible" : 0,
+			"_slotted" : 0
+		}
+
+	}
+
+}

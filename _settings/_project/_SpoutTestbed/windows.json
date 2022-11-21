@@ -1,0 +1,22 @@
+{
+	"bs_gui_win_fps-graph_S_Solver" : 	{
+		"_pin" : 0,
+		"_type" : "Solver",
+		"_slotsize" : 45
+	}
+,
+	"_storenames" : "Main",
+	"_slotspot" : 0,
+	"bs_gui_win_PixelPusher_P_Canvas" : 	{
+		"_pin" : 0,
+		"_type" : "Canvas",
+		"_slotsize" : 65
+	}
+,
+	"bs_gui_win_QueScript_PB_ProgressBar" : 	{
+		"_pin" : 0,
+		"_type" : "ProgressBar",
+		"_slotsize" : 45
+	}
+
+}

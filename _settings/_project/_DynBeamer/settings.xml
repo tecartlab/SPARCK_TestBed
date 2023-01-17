@@ -17,10 +17,10 @@
 			<patcher name = "3DViewer">
 				<pattr name = "_enable" value = "1" />
 				<patcher name = "_orbiter">
-					<pattr name = "orbitOnePosition" value = "position -0.746262 -5.390296 0.479693" />
 					<pattr name = "orbitOneQuat" value = "quat 0. 0. -0.999648 0.026177" />
-					<pattr name = "orbitThreePosition" value = "position 0. 0. 3.1" />
+					<pattr name = "orbitOnePosition" value = "position -0.746262 -5.390296 0.479693" />
 					<pattr name = "orbitTwoQuat" value = "quat 0.615656 0. 0. 0.788004" />
+					<pattr name = "orbitThreePosition" value = "position 0. 0. 3.1" />
 				</patcher>
 				<patcher name = "_setgroupstage">
 					<pattr name = "matrix" value = "0 0 0" />
@@ -28,7 +28,7 @@
 				</patcher>
 				<patcher name = "_storePosition">
 					<patcher name = "patcher">
-						<pattr name = "position" value = "rect 5 48 545 380" />
+						<pattr name = "position" value = "rect 5 66 545 398" />
 					</patcher>
 				</patcher>
 			</patcher>
@@ -41,10 +41,10 @@
 			</patcher>
 			<patcher name = "Output">
 				<patcher name = "_orbiter">
-					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
 					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0. 1." />
-					<pattr name = "orbitThreePosition" value = "position 0. 0. 3." />
+					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
 					<pattr name = "orbitTwoQuat" value = "quat 0. 0. 0. 1." />
+					<pattr name = "orbitThreePosition" value = "position 0. 0. 3." />
 				</patcher>
 			</patcher>
 			<patcher name = "TfmMirror">

@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 535.0, 104.0, 753.0, 181.0 ],
+		"rect" : [ 639.0, 85.0, 760.0, 184.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 565.0, 121.0, 113.0, 22.0 ],
+					"patching_rect" : [ 576.0, 116.0, 113.0, 22.0 ],
 					"text" : "ossia.device sparck"
 				}
 
@@ -58,8 +58,20 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 407.0, 21.0, 61.0, 22.0 ],
+					"patching_rect" : [ 418.0, 16.0, 61.0, 22.0 ],
 					"text" : "savebang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 352.0, 17.0, 63.0, 22.0 ],
+					"text" : "closebang"
 				}
 
 			}
@@ -72,7 +84,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 34.0, 23.0, 43.0, 20.0 ],
+					"patching_rect" : [ 45.0, 18.0, 43.0, 20.0 ],
 					"rounded" : 5.0,
 					"text" : "relax",
 					"usebgoncolor" : 1,
@@ -88,7 +100,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 362.0, 121.0, 200.0, 22.0 ],
+					"patching_rect" : [ 373.0, 116.0, 200.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 4, 45, 401, 280 ],
 						"parameter_enable" : 0,
@@ -108,7 +120,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 235.0, 25.0, 58.0, 22.0 ],
+					"patching_rect" : [ 203.75, 11.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -120,7 +132,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 24.0, 123.0, 69.0, 22.0 ],
+					"patching_rect" : [ 35.0, 118.0, 69.0, 22.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"text" : "thispatcher"
 				}
@@ -137,13 +149,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 2,
+							"revision" : 3,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 643.0, 407.0, 640.0, 480.0 ],
+						"rect" : [ 1122.0, 380.0, 710.0, 726.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -179,40 +191,17 @@
 									"clickthrough" : 0,
 									"enablehscroll" : 0,
 									"enablevscroll" : 0,
-									"id" : "obj-4",
+									"id" : "obj-3",
 									"lockeddragscroll" : 0,
 									"lockedsize" : 0,
 									"maxclass" : "bpatcher",
-									"name" : "bs.node.Grid.maxpat",
-									"numinlets" : 3,
-									"numoutlets" : 0,
-									"offset" : [ 0.0, 0.0 ],
-									"patching_rect" : [ 60.0, 344.0, 180.0, 36.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 76.0, 362.0, 163.0, 130.0 ],
-									"varname" : "Grid",
-									"viewvisibility" : 1
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bgmode" : 0,
-									"border" : 0,
-									"clickthrough" : 0,
-									"enablehscroll" : 0,
-									"enablevscroll" : 0,
-									"id" : "obj-2",
-									"lockeddragscroll" : 0,
-									"lockedsize" : 0,
-									"maxclass" : "bpatcher",
-									"name" : "bs.node.Canvas.maxpat",
-									"numinlets" : 4,
+									"name" : "bs.node.Texture.maxpat",
+									"numinlets" : 1,
 									"numoutlets" : 4,
 									"offset" : [ 0.0, 0.0 ],
-									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 55.0, 134.0, 180.0, 36.0 ],
-									"varname" : "Canvas",
+									"outlettype" : [ "", "jit_gl_texture", "", "" ],
+									"patching_rect" : [ 286.0, 15.0, 242.0, 106.0 ],
+									"varname" : "Texture",
 									"viewvisibility" : 1
 								}
 
@@ -228,13 +217,13 @@
 									"lockeddragscroll" : 0,
 									"lockedsize" : 0,
 									"maxclass" : "bpatcher",
-									"name" : "bs.node.RigidBody.maxpat",
-									"numinlets" : 2,
-									"numoutlets" : 2,
+									"name" : "bs.node.Canvas.maxpat",
+									"numinlets" : 4,
+									"numoutlets" : 4,
 									"offset" : [ 0.0, 0.0 ],
-									"outlettype" : [ "", "bang" ],
-									"patching_rect" : [ 54.0, 55.0, 180.0, 36.0 ],
-									"varname" : "Sphere_TFM",
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 286.0, 232.0, 242.0, 596.0 ],
+									"varname" : "Canvas",
 									"viewvisibility" : 1
 								}
 
@@ -246,26 +235,75 @@
 									"clickthrough" : 0,
 									"enablehscroll" : 0,
 									"enablevscroll" : 0,
-									"id" : "obj-3",
+									"id" : "obj-2",
 									"lockeddragscroll" : 0,
 									"lockedsize" : 0,
 									"maxclass" : "bpatcher",
-									"name" : "bs.node.OptiTrack.maxpat",
-									"numinlets" : 2,
-									"numoutlets" : 2,
+									"name" : "bs.node.Grid.maxpat",
+									"numinlets" : 3,
+									"numoutlets" : 0,
 									"offset" : [ 0.0, 0.0 ],
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 322.0, 38.0, 242.0, 369.0 ],
-									"varname" : "OptiTrack",
+									"patching_rect" : [ 10.0, 13.0, 242.0, 270.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 64.0, 54.0, 163.0, 130.0 ],
+									"varname" : "Grid",
 									"viewvisibility" : 1
 								}
 
 							}
+, 							{
+								"box" : 								{
+									"id" : "obj-5",
+									"maxclass" : "button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 434.666666666666629, 123.0, 24.0, 24.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 13.0,
+									"id" : "obj-18",
+									"linecount" : 4,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 434.666666666666629, 154.5704345703125, 140.0, 68.0 ],
+									"text" : "jit.gl.gridshape sparck @color 1 1 1 1 @matrixoutput 1 @automatic 0"
+								}
+
+							}
  ],
-						"lines" : [  ]
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 2 ],
+									"source" : [ "obj-18", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 1 ],
+									"source" : [ "obj-3", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"source" : [ "obj-5", 0 ]
+								}
+
+							}
+ ]
 					}
 ,
-					"patching_rect" : [ 114.0, 123.0, 80.0, 22.0 ],
+					"patching_rect" : [ 125.0, 118.0, 80.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -294,9 +332,9 @@
 					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "int", "" ],
-					"patching_rect" : [ 24.0, 56.0, 694.0, 54.320755004882812 ],
+					"patching_rect" : [ 35.0, 51.0, 694.0, 54.320755004882812 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 291.0, 184.0, 499.0, 50.320755004882812 ],
+					"presentation_rect" : [ 200.0, 55.0, 499.0, 50.320755004882812 ],
 					"varname" : "Application_sparck",
 					"viewvisibility" : 1
 				}
@@ -313,7 +351,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"midpoints" : [ 371.0, 118.16037799999998, 371.5, 118.16037799999998 ],
+					"midpoints" : [ 382.0, 113.16037799999998, 382.5, 113.16037799999998 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -321,7 +359,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
-					"midpoints" : [ 708.5, 116.660377502441406, 574.5, 116.660377502441406 ],
+					"midpoints" : [ 719.5, 111.660377502441406, 585.5, 111.660377502441406 ],
 					"source" : [ "obj-1", 2 ]
 				}
 
@@ -343,8 +381,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 3 ],
-					"midpoints" : [ 371.5, 153.0, 547.5, 153.0, 547.5, 45.0, 539.75, 45.0 ],
+					"midpoints" : [ 382.5, 148.0, 558.5, 148.0, 558.5, 40.0, 550.75, 40.0 ],
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 2 ],
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
@@ -358,7 +403,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 4 ],
-					"midpoints" : [ 574.5, 156.0, 727.5, 156.0, 727.5, 45.0, 708.5, 45.0 ],
+					"midpoints" : [ 585.5, 151.0, 738.5, 151.0, 738.5, 40.0, 719.5, 40.0 ],
 					"source" : [ "obj-8", 0 ]
 				}
 
@@ -366,7 +411,8 @@
  ],
 		"parameters" : 		{
 			"obj-1::obj-1::obj-72" : [ "toggle[1]", "toggle", 0 ],
-			"obj-2::obj-2::obj-10::obj-99::obj-12::obj-47::obj-20::obj-72" : [ "toggle", "toggle", 0 ],
+			"obj-2::obj-1::obj-10::obj-99::obj-12::obj-47::obj-20::obj-72" : [ "toggle[2]", "toggle", 0 ],
+			"obj-2::obj-3::obj-99::obj-12::obj-47::obj-20::obj-72" : [ "toggle", "toggle", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -375,6 +421,18 @@
 		}
 ,
 		"dependency_cache" : [ 			{
+				"name" : "2int.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/ossia/basic/util",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "4float.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/ossia/basic/util",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "Jay3DeeWindow.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/externals",
 				"type" : "JSON",
@@ -585,10 +643,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.latencycomp.mxe64",
-				"type" : "mx64"
-			}
-, 			{
 				"name" : "bs.math.fov.js",
 				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/javascript/math",
 				"type" : "TEXT",
@@ -631,19 +685,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.node.OptiTrack.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/nodes/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.node.OptiTrack.stream.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/nodes/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.node.RigidBody.maxpat",
+				"name" : "bs.node.Texture.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/nodes/ossia",
 				"type" : "JSON",
 				"implicit" : 1
@@ -751,13 +793,13 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.ossia.remote.float.maxpat",
+				"name" : "bs.ossia.remote.color.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/ossia",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.ossia.remote.impulse.maxpat",
+				"name" : "bs.ossia.remote.float.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/ossia",
 				"type" : "JSON",
 				"implicit" : 1
@@ -781,8 +823,20 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.ossia.remote.string.maxpat",
+				"name" : "bs.ossia.remote.rendergroup.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/ossia/rendergroup",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.ossia.remote.select.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.ossia.remote.tfm.local.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/ossia/transforms",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -793,7 +847,38 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.props.OptiTrack.p.maxpat",
+				"name" : "bs.ossia.remote.vec2i.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.ossia.remote.vec4f.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.ossia.remote.vecf.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.props.Canvas.p.maxpat",
+				"bootpath" : "D:/00_core/MaxMSP_Packages/Sparck2/patchers/nodes/ossia",
+				"patcherrelativepath" : "../../../00_core/MaxMSP_Packages/Sparck2/patchers/nodes/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.props.Grid.p.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/nodes/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.props.Texture.p.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/nodes/ossia",
 				"type" : "JSON",
 				"implicit" : 1
@@ -902,7 +987,8 @@
 			}
 , 			{
 				"name" : "bs.vpl.util.type2color.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/Sparck2/patchers/vpl",
+				"bootpath" : "D:/00_core/MaxMSP_Packages/Sparck2/patchers/vpl",
+				"patcherrelativepath" : "../../../00_core/MaxMSP_Packages/Sparck2/patchers/vpl",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -922,6 +1008,10 @@
 			}
 , 			{
 				"name" : "icst.intui.mxe64",
+				"type" : "mx64"
+			}
+, 			{
+				"name" : "icst.listui.mxe64",
 				"type" : "mx64"
 			}
 , 			{
@@ -962,8 +1052,8 @@
 			}
 , 			{
 				"name" : "settings.xml",
-				"bootpath" : "D:/03_personal/MartinFroehlich/Sparck_TestBed/_settings/_project/_Optitrack",
-				"patcherrelativepath" : "./_settings/_project/_Optitrack",
+				"bootpath" : "D:/03_personal/MartinFroehlich/Sparck_TestBed/_settings/_project/_Canvas",
+				"patcherrelativepath" : "./_settings/_project/_Canvas",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

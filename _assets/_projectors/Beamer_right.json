@@ -1,0 +1,50 @@
+{
+	"pattrstorage" : 	{
+		"name" : "Beamer",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"parent::implementParent" : [  ],
+					"parent::parent::matrix" : [  ],
+					"calibration::matrix" : [ 0.999914, -0.007715, 0.010561, -0.0, -0.010325, 0.030062, 0.999495, -0.0, -0.008029, -0.999518, 0.029979, 0.0, 1.750425, -7.811188, 5.502413, 1.0 ],
+					"gateObject::fileName" : [ "IASpace_Model.obj" ],
+					"color::alpha" : [ 1.0 ],
+					"color::blue" : [ 0.968627 ],
+					"color::green" : [ 0.905882 ],
+					"color::red" : [ 0.266667 ],
+					"calibObjOffset::PosX" : [ 0.0 ],
+					"calibObjOffset::PosY" : [ 0.0 ],
+					"calibObjOffset::PosZ" : [ 0.0 ],
+					"calibObjOffset::RotX" : [ 0.0 ],
+					"calibObjOffset::RotY" : [ 0.0 ],
+					"calibObjOffset::RotZ" : [ 0.0 ],
+					"calibObjOffset::ScaleXYZ" : [ 1.0 ],
+					"calibObjOffset::use" : [ 0 ],
+					"beamer::matrix" : [ 0.999914, -0.007715, 0.010561, 0.0, -0.010325, 0.030062, 0.999495, 0.0, -0.008029, -0.999518, 0.029979, 0.0, 1.750425, -7.811188, 5.502413, 1.0 ],
+					"resolution::height" : [ 1600 ],
+					"resolution::width" : [ 2560 ],
+					"flags::fixAspectRatio" : [ 1 ],
+					"flags::fixIntrinsic" : [ 1 ],
+					"flags::fixK1" : [ 1 ],
+					"flags::fixK2" : [ 1 ],
+					"flags::fixK3" : [ 1 ],
+					"flags::fixK4" : [ 0 ],
+					"flags::fixK5" : [ 0 ],
+					"flags::fixK6" : [ 0 ],
+					"flags::zeroTangentDistance" : [ 1 ],
+					"intrinsic::frustumBottom" : [ -0.070938 ],
+					"intrinsic::frustumFar" : [ 100.0 ],
+					"intrinsic::frustumLeft" : [ -0.063231 ],
+					"intrinsic::frustumNear" : [ 0.1 ],
+					"intrinsic::frustumRight" : [ 0.028831 ],
+					"intrinsic::frustumTop" : [ -0.0134 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

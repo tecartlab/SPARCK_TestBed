@@ -1,0 +1,50 @@
+{
+	"pattrstorage" : 	{
+		"name" : "Beamer",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"parent::implementParent" : [  ],
+					"parent::parent::matrix" : [  ],
+					"calibration::matrix" : [ 0.995879232883453, -0.085746601223946, 0.029531069099903, -0.0, -0.026600806042552, 0.035117514431477, 0.999029099941254, -0.0, -0.086700409650803, -0.995697915554047, 0.03269187361002, 0.0, -1.587928414344788, -7.76394510269165, 5.532980442047119, 1.0 ],
+					"gateObject::fileName" : [ "IASpace_Model.obj" ],
+					"color::alpha" : [ 1.0 ],
+					"color::blue" : [ 0.364706 ],
+					"color::green" : [ 0.364706 ],
+					"color::red" : [ 0.984314 ],
+					"calibObjOffset::PosX" : [ 0.0 ],
+					"calibObjOffset::PosY" : [ 0.0 ],
+					"calibObjOffset::PosZ" : [ 0.0 ],
+					"calibObjOffset::RotX" : [ 0.0 ],
+					"calibObjOffset::RotY" : [ 0.0 ],
+					"calibObjOffset::RotZ" : [ 0.0 ],
+					"calibObjOffset::ScaleXYZ" : [ 1.0 ],
+					"calibObjOffset::use" : [ 0 ],
+					"beamer::matrix" : [ 0.995879232883453, -0.085746601223946, 0.029531069099903, 0.0, -0.026600806042552, 0.035117514431477, 0.999029099941254, 0.0, -0.086700409650803, -0.995697915554047, 0.03269187361002, 0.0, -1.587928414344788, -7.76394510269165, 5.532980442047119, 1.0 ],
+					"resolution::height" : [ 1600 ],
+					"resolution::width" : [ 2560 ],
+					"flags::fixAspectRatio" : [ 1 ],
+					"flags::fixIntrinsic" : [ 1 ],
+					"flags::fixK1" : [ 1 ],
+					"flags::fixK2" : [ 1 ],
+					"flags::fixK3" : [ 1 ],
+					"flags::fixK4" : [ 0 ],
+					"flags::fixK5" : [ 0 ],
+					"flags::fixK6" : [ 0 ],
+					"flags::zeroTangentDistance" : [ 1 ],
+					"intrinsic::frustumBottom" : [ -0.006977214012295 ],
+					"intrinsic::frustumFar" : [ 100.0 ],
+					"intrinsic::frustumLeft" : [ -0.004210866056383 ],
+					"intrinsic::frustumNear" : [ 0.01 ],
+					"intrinsic::frustumRight" : [ 0.004991027992219 ],
+					"intrinsic::frustumTop" : [ -0.001226030290127 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

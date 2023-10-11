@@ -3,7 +3,7 @@
 <pattrstorage name = "settings">
 	<slot number = "1">
 		<patcher name = "Application_sparck">
-			<pattr name = "editor" value = "0" />
+			<pattr name = "editor" value = "1" />
 			<pattr name = "mainMetro" value = "&quot;20 hz&quot;" />
 			<pattr name = "mainSwitch" value = "1" />
 			<patcher name = "_properties">
@@ -17,10 +17,10 @@
 			<patcher name = "3DViewer">
 				<pattr name = "_enable" value = "1" />
 				<patcher name = "_orbiter">
-					<pattr name = "orbitOneQuat" value = "quat 0. 0. -0.999648 0.026177" />
-					<pattr name = "orbitOnePosition" value = "position -0.746262 -5.390296 0.479693" />
-					<pattr name = "orbitTwoQuat" value = "quat 0.615656 0. 0. 0.788004" />
-					<pattr name = "orbitThreePosition" value = "position 0. 0. 3.1" />
+					<pattr name = "orbitOneQuat" value = "quat 0. 0. -0.64278 0.766035" />
+					<pattr name = "orbitOnePosition" value = "position 0.738856 -6.937094 4.556817" />
+					<pattr name = "orbitTwoQuat" value = "quat 0.622508 0. 0. 0.7826" />
+					<pattr name = "orbitThreePosition" value = "position 0. 0. 4.2" />
 				</patcher>
 				<patcher name = "_setgroupstage">
 					<pattr name = "matrix" value = "0 0 0" />
@@ -28,7 +28,7 @@
 				</patcher>
 				<patcher name = "_storePosition">
 					<patcher name = "patcher">
-						<pattr name = "position" value = "rect 5 66 545 398" />
+						<pattr name = "position" value = "rect 5 66 1080 778" />
 					</patcher>
 				</patcher>
 			</patcher>

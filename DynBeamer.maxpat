@@ -186,36 +186,35 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-22",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 416.333333333333314, 157.0, 105.0, 22.0 ],
-									"text" : "prepend addToXY"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-21",
+									"id" : "obj-15",
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 416.0, 117.0, 73.0, 22.0 ]
+									"patching_rect" : [ 222.0, 409.0, 180.0, 22.0 ],
+									"text" : "getlist getworldpos getworldquat"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-16",
-									"maxclass" : "newobj",
+									"bgmode" : 0,
+									"border" : 0,
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
+									"id" : "obj-12",
+									"lockeddragscroll" : 0,
+									"lockedsize" : 0,
+									"maxclass" : "bpatcher",
+									"name" : "bs.node.TfmNode.maxpat",
 									"numinlets" : 2,
 									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 470.0, 80.0, 87.0, 22.0 ],
-									"text" : "route makerlist"
+									"offset" : [ 0.0, 0.0 ],
+									"outlettype" : [ "", "bang" ],
+									"patching_rect" : [ 60.0, 440.0, 180.0, 36.0 ],
+									"varname" : "TfmNode",
+									"viewvisibility" : 1
 								}
 
 							}
@@ -301,7 +300,7 @@
 									"numoutlets" : 5,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "", "", "", "", "" ],
-									"patching_rect" : [ 317.0, 436.0, 180.0, 36.0 ],
+									"patching_rect" : [ 309.0, 440.0, 180.0, 36.0 ],
 									"varname" : "Video",
 									"viewvisibility" : 1
 								}
@@ -323,7 +322,7 @@
 									"numoutlets" : 2,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 317.0, 360.0, 180.0, 36.0 ],
+									"patching_rect" : [ 309.0, 364.0, 180.0, 36.0 ],
 									"varname" : "Camera",
 									"viewvisibility" : 1
 								}
@@ -503,11 +502,53 @@
 								}
 
 							}
+, 							{
+								"box" : 								{
+									"id" : "obj-22",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 416.333333333333314, 157.0, 105.0, 22.0 ],
+									"text" : "prepend addToXY"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-21",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 416.0, 117.0, 73.0, 22.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-16",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 470.0, 80.0, 87.0, 22.0 ],
+									"text" : "route makerlist"
+								}
+
+							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
 									"destination" : [ "obj-16", 0 ],
 									"source" : [ "obj-14", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-12", 1 ],
+									"source" : [ "obj-15", 0 ]
 								}
 
 							}
@@ -673,6 +714,13 @@
 		}
 ,
 		"dependency_cache" : [ 			{
+				"name" : "Beamer_left.json",
+				"bootpath" : "/Volumes/Ddrive/04_projects/I.A[projects]/1508_SPARCK/00_projects/_testbed/_assets/_projectors",
+				"patcherrelativepath" : "./_assets/_projectors",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "Jay3DeeCamera.maxpat",
 				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/externals",
 				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/externals",
@@ -712,13 +760,6 @@
 				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/media",
 				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/media",
 				"type" : "PNG",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "TestBeamer.xml",
-				"bootpath" : "/Volumes/Ddrive/04_projects/I.A[projects]/1508_SPARCK/00_projects/_testbed/_assets/_projectors",
-				"patcherrelativepath" : "./_assets/_projectors",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -1096,6 +1137,13 @@
 			}
 , 			{
 				"name" : "bs.node.SceneCamera.maxpat",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/nodes/ossia",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/nodes/ossia",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bs.node.TfmNode.maxpat",
 				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/nodes/ossia",
 				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/nodes/ossia",
 				"type" : "JSON",

@@ -17,9 +17,9 @@
 			<patcher name = "3DViewer">
 				<pattr name = "_enable" value = "1" />
 				<patcher name = "_orbiter">
-					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0.267233 -0.963612" />
+					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0.72536 -0.68834" />
 					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
-					<pattr name = "orbitTwoQuat" value = "quat 0.551927 0. 0. 0.833871" />
+					<pattr name = "orbitTwoQuat" value = "quat 0.233441 0. 0. 0.972351" />
 					<pattr name = "orbitThreePosition" value = "position 0. 0. 4.9" />
 				</patcher>
 				<patcher name = "_setgroupstage">
@@ -28,7 +28,7 @@
 				</patcher>
 				<patcher name = "_storePosition">
 					<patcher name = "patcher">
-						<pattr name = "position" value = "rect 21 45 587 429" />
+						<pattr name = "position" value = "rect 21 66 587 450" />
 					</patcher>
 				</patcher>
 			</patcher>

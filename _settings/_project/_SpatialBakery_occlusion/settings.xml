@@ -17,10 +17,10 @@
 			<patcher name = "3DViewer">
 				<pattr name = "_enable" value = "1" />
 				<patcher name = "_orbiter">
+					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0.104516 0.994406" />
 					<pattr name = "orbitOnePosition" value = "position 0.182405 0.438186 2.014386" />
-					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0.936565 -0.350167" />
-					<pattr name = "orbitThreePosition" value = "position 0. 0. 13.85" />
-					<pattr name = "orbitTwoQuat" value = "quat -0.529856 0. 0. -0.847943" />
+					<pattr name = "orbitTwoQuat" value = "quat -0.492364 0. 0. -0.870247" />
+					<pattr name = "orbitThreePosition" value = "position 0. 0. 5.75" />
 				</patcher>
 				<patcher name = "_setgroupstage">
 					<pattr name = "matrix" value = "0 0 1" />
@@ -28,7 +28,7 @@
 				</patcher>
 				<patcher name = "_storePosition">
 					<patcher name = "patcher">
-						<pattr name = "position" value = "rect 5 48 545 380" />
+						<pattr name = "position" value = "rect 5 66 618 432" />
 					</patcher>
 				</patcher>
 			</patcher>
@@ -59,18 +59,18 @@
 			</patcher>
 			<patcher name = "Output_Projectors">
 				<patcher name = "_orbiter">
-					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
 					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0. 1." />
-					<pattr name = "orbitThreePosition" value = "position 0. 0. 3." />
+					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
 					<pattr name = "orbitTwoQuat" value = "quat 0. 0. 0. 1." />
+					<pattr name = "orbitThreePosition" value = "position 0. 0. 3." />
 				</patcher>
 			</patcher>
 			<patcher name = "Output_BakingTexture">
 				<patcher name = "_orbiter">
-					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
 					<pattr name = "orbitOneQuat" value = "quat 0. 0. 0. 1." />
-					<pattr name = "orbitThreePosition" value = "position 0. 0. 3." />
+					<pattr name = "orbitOnePosition" value = "position 0. 0. 0." />
 					<pattr name = "orbitTwoQuat" value = "quat 0. 0. 0. 1." />
+					<pattr name = "orbitThreePosition" value = "position 0. 0. 3." />
 				</patcher>
 			</patcher>
 		</patcher>

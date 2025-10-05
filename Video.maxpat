@@ -83,7 +83,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 550.0, 109.0, 113.0, 22.0 ],
-					"text" : "ossia.device sparck"
+					"text" : "sparck.device sparck"
 				}
 
 			}
@@ -191,7 +191,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 588.0, 373.0, 597.0, 384.0 ],
+						"rect" : [ 588.0, 373.0, 597.0, 357.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -278,7 +278,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"offset" : [ 0.0, 0.0 ],
-									"patching_rect" : [ 9.0, 22.0, 180.0, 36.0 ],
+									"patching_rect" : [ 15.0, 21.0, 180.0, 36.0 ],
 									"varname" : "Output",
 									"viewvisibility" : 1
 								}
@@ -1092,23 +1092,23 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "ossia.device.mxo",
+				"name" : "sparck.device.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "ossia.model.mxo",
+				"name" : "sparck.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "ossia.parameter.mxo",
+				"name" : "sparck.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "ossia.remote.mxo",
+				"name" : "sparck.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "ossia.view.mxo",
+				"name" : "sparck.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{

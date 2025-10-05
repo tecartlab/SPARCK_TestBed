@@ -2,42 +2,16 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 8,
-			"minor" : 6,
-			"revision" : 0,
+			"major" : 9,
+			"minor" : 0,
+			"revision" : 9,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
 		"rect" : [ 587.0, 100.0, 819.0, 169.0 ],
-		"bglocked" : 0,
-		"openinpresentation" : 0,
-		"default_fontsize" : 12.0,
-		"default_fontface" : 0,
-		"default_fontname" : "Arial",
-		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 1,
-		"objectsnaponopen" : 1,
-		"statusbarvisible" : 2,
-		"toolbarvisible" : 1,
-		"lefttoolbarpinned" : 0,
-		"toptoolbarpinned" : 0,
-		"righttoolbarpinned" : 0,
-		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
-		"tallnewobj" : 0,
-		"boxanimatetime" : 200,
-		"enablehscroll" : 1,
-		"enablevscroll" : 1,
-		"devicewidth" : 0.0,
-		"description" : "",
-		"digest" : "",
-		"tags" : "",
-		"style" : "",
-		"subpatcher_template" : "",
-		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"color" : [ 0.12549, 0.796078, 0.894118, 1.0 ],
@@ -46,8 +20,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 595.0, 124.0, 113.0, 22.0 ],
-					"text" : "ossia.device sparck"
+					"patching_rect" : [ 595.0, 124.0, 121.0, 22.0 ],
+					"text" : "sparck.device sparck"
 				}
 
 			}
@@ -147,42 +121,16 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 0,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 9,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
 						"rect" : [ 591.0, 342.0, 815.0, 513.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 0,
-						"default_fontsize" : 12.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 1,
-						"objectsnaponopen" : 1,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"lefttoolbarpinned" : 0,
-						"toptoolbarpinned" : 0,
-						"righttoolbarpinned" : 0,
-						"bottomtoolbarpinned" : 0,
-						"toolbars_unpinned_last_save" : 0,
-						"tallnewobj" : 0,
-						"boxanimatetime" : 200,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"style" : "",
-						"subpatcher_template" : "",
-						"assistshowspatchername" : 0,
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
@@ -199,7 +147,7 @@
 									"numinlets" : 4,
 									"numoutlets" : 0,
 									"offset" : [ 0.0, 0.0 ],
-									"patching_rect" : [ 255.0, 49.0, 242.0, 373.0 ],
+									"patching_rect" : [ 255.0, 49.0, 180.0, 36.0 ],
 									"varname" : "Viewport_2",
 									"viewvisibility" : 1
 								}
@@ -220,7 +168,7 @@
 									"numinlets" : 4,
 									"numoutlets" : 0,
 									"offset" : [ 0.0, 0.0 ],
-									"patching_rect" : [ 504.0, 49.0, 242.0, 446.0 ],
+									"patching_rect" : [ 504.0, 49.0, 180.0, 36.0 ],
 									"varname" : "MeshWarp",
 									"viewvisibility" : 1
 								}
@@ -241,7 +189,7 @@
 									"numinlets" : 4,
 									"numoutlets" : 0,
 									"offset" : [ 0.0, 0.0 ],
-									"patching_rect" : [ 7.0, 49.0, 242.0, 373.0 ],
+									"patching_rect" : [ 7.0, 49.0, 180.0, 36.0 ],
 									"varname" : "Viewport_1",
 									"viewvisibility" : 1
 								}
@@ -273,13 +221,6 @@
 					}
 ,
 					"patching_rect" : [ 144.0, 126.0, 80.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"description" : "",
-						"digest" : "",
-						"globalpatchername" : "",
-						"tags" : ""
-					}
-,
 					"text" : "p Workspace",
 					"varname" : "workspace"
 				}
@@ -385,18 +326,77 @@
 			"obj-2::obj-6::obj-32::obj-23::obj-12::obj-47::obj-20::obj-72" : [ "toggle", "toggle", 0 ],
 			"obj-2::obj-6::obj-32::obj-37::obj-72" : [ "toggle[4]", "toggle", 0 ],
 			"obj-2::obj-6::obj-32::obj-38::obj-12::obj-47::obj-20::obj-72" : [ "toggle[2]", "toggle", 0 ],
-			"parameterbanks" : 			{
-
-			}
-,
 			"inherited_shortname" : 1
 		}
 ,
 		"dependency_cache" : [ 			{
+				"name" : "EditorHelper.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_draw",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_draw",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "Face3.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "Geometry.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "Jay3DeeWindow.maxpat",
 				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/externals",
 				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/externals",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "Lattice2D.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "LatticeMngr.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "MeshLoader.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "MeshMngr.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "OBJLoader.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "OBJWriter.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -407,9 +407,51 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "UIEvent.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_gui",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_gui",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "Warp2d_EditorHelper.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_draw",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_draw",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "WarpLoader.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "_draw.js",
 				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_draw",
 				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_draw",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "_gui.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_gui",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_gui",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "_three.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_three",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_three",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "_warp.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/_warp",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -860,104 +902,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bs.ossia.remote.button.maxpat",
-				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.color.maxpat",
-				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.float.maxpat",
-				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.impulse.maxpat",
-				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.int.maxpat",
-				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.js",
-				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/ossia",
-				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/ossia",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.menu.maxpat",
-				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.menu.path.maxpat",
-				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.rendergroup.maxpat",
-				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/ossia/rendergroup",
-				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/ossia/rendergroup",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.select.maxpat",
-				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.tfm.local.maxpat",
-				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/ossia/transforms",
-				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/ossia/transforms",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.ossia.remote.toggle.maxpat",
-				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.props.MeshWarp.p.maxpat",
-				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/nodes/ossia",
-				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/nodes/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bs.props.Viewport.p.maxpat",
-				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/nodes/ossia",
-				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/nodes/ossia",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "bs.rendergroup.capture.gui.maxpat",
 				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/patchers/ossia/rendergroup",
 				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/patchers/ossia/rendergroup",
@@ -1088,14 +1032,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "icst.floatui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "icst.intui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "mxj.mxo",
 				"type" : "iLaX"
 			}
@@ -1107,24 +1043,11 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "ossia.device.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "ossia.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "ossia.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "ossia.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "ossia.view.mxo",
-				"type" : "iLaX"
+				"name" : "node.iolets.js",
+				"bootpath" : "/Volumes/Ddrive/00_core/MaxMSP_Packages/Sparck2/javascript/vpl/classes",
+				"patcherrelativepath" : "../../../../../00_core/MaxMSP_Packages/Sparck2/javascript/vpl/classes",
+				"type" : "TEXT",
+				"implicit" : 1
 			}
 , 			{
 				"name" : "patcher_preferences.xml",
@@ -1139,6 +1062,18 @@
 				"patcherrelativepath" : "./_settings/_project/_MeshWarp",
 				"type" : "TEXT",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "sparck.device.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "sparck.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "sparck.parameter.mxo",
+				"type" : "iLaX"
 			}
  ],
 		"autosave" : 0,

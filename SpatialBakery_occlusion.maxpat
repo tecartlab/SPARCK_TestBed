@@ -47,7 +47,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 563.0, 110.0, 113.0, 22.0 ],
-					"text" : "ossia.device sparck"
+					"text" : "sparck.device sparck"
 				}
 
 			}
@@ -3671,23 +3671,23 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "ossia.device.mxo",
+				"name" : "sparck.device.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "ossia.model.mxo",
+				"name" : "sparck.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "ossia.parameter.mxo",
+				"name" : "sparck.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "ossia.remote.mxo",
+				"name" : "sparck.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "ossia.view.mxo",
+				"name" : "sparck.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{

@@ -11,6 +11,6 @@
 		"_slotsize" : 65
 	}
 ,
-	"_storenames" : "Main",
+	"_storenames" : [ "Main" ],
 	"_slotspot" : 0
 }
